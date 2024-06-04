@@ -1,0 +1,118 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    background-color: #2F4F4E;
+}
+
+.text1 {
+    position: absolute;
+    width: 480px;
+    height: 28px;
+    left: 127px;
+    top: 196px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    color: #D9A530;
+}
+
+.hotel {
+    position: absolute;
+    width: 782px;
+    height: 191px;
+    left: 118px;
+    top: 236px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 244px;
+    color: #F9EBD7;
+}
+
+.sub-text {
+    position: absolute;
+    width: 758px;
+    height: 101px;
+    left: 127px;
+    top: 470px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    color: #F9EBD7;
+}
+
+/* ---------------------------------------Card Styles ----------------------------------------- */
+
+.card {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    background-color: #2F4F4E;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 500px;
+}
+
+.card-image img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: #D9A530;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    color: #F9EBD7
+}
+
+.card-content p {
+    margin: 10px 0;
+    color: #F9EBD7
+}
+
+.card-content button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-content button:hover {
+    background-color: #0056b3;
+}
+
+.rectangle {
+    /* Rectangle 1 */
+
+    position: absolute;
+    width: 260px;
+    height: 32px;
+    left: 456px;
+    top: 293px;
+
+    background: rgba(47, 79, 78, 0.6);
+    border-radius: 15px;
+
+}
