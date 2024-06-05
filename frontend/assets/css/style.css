@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
@@ -17,7 +17,7 @@
 /*-------------------------------Inicio style Main ------------------------*/
 
 body {
-    background-color: var(--cor-segundaria);
+    background-color: var(--cor-principal);
 }
 
 /*-------------------------------Inicio style Navbar ------------------------*/
@@ -64,18 +64,38 @@ body {
 }
 
 /*-------------------------------Inicio style Conteudo Principal ------------------------*/
+
+
 .container_pai {
     width: 100%;
-    height: 748px;
-    background-image: url(../img/img-arealazer1.png);
+    height: 1000px;
+    background-image: url(../img/Plano_de_Fundo.png);
     background-size: cover;
     background-position: center;
 }
 
+
+#conteudo_Principal {
+    display: flex;
+    align-content: start;
+    flex-direction: column;
+    margin-right: 223px;
+    color: var(--cor-fonte);
+}
+
+.titulo_conteudo_Principal {
+    width: 797px;
+    height: 219px;
+    margin-left: 99px;
+    margin-top: 263px;
+    font-size: 60px;
+    font-weight: 100;
+}
 .campo_de_busca_conteudo_Principal{
     width: 960px;
     height: 149px;
     margin-left: 99px;
+    margin-top: 14px;
     background-color: var(--cor-fonte);
     color: var(--cor-principal);
     border-radius: 15px;
@@ -145,137 +165,22 @@ body {
     cursor: pointer;
 }
 
-
-#conteudo_Principal {
-    color: var(--cor-fonte);
-    background-color: rgba(30, 30, 30, 0.43);
-    margin-top: 185px;
-}
-
-#crystal-titulo {
-    font-size: 20px;
-    text-align: left;
-    color: #fff;
-}
-
-#nomeDoHotel {
-    font-size: 96px;
-    color: #fff;
-}
-
-#localizacao {
-    background-color: rgba(47, 79, 78, 0.61);
-    width: 332px;
-    height: 51px;
-    margin: 0;
-    border-radius: 50px;
-    border: 1px solid #598B8A;
-}
-
-#cep {
-    text-align: center;
-    margin: 10px;
-}
-
-.descricao {
-    font-size: 20px;
-    text-align: left;
-    color: var(--cor-fonte);
-    margin: 70px 0 0 70px;
-}
-
-#subnavbar {
-    text-align: center;
-    margin-top: 100px;
-}
-
-#subnavbar a {
-    text-decoration: none;
-    color: var(--cor-fonte);
-    margin: 0 25.5px;
-    display: inline-block;
-    transition: 0.5s;
-}
-
-#subnavbar a:hover {
-    background-color: var(--cor-fonte);
-    color: var(--cor-segundaria);
-    padding: 10px;
-    border-radius: 15px;
-    transition: all 0.5s;
-}
-
-.iframe-container {
+.conteudo_informativo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--cor-segundaria);
+    border-radius: 35px;
 }
-
-.iframe-container iframe {
-    max-width: 100%;
-    border-radius: 45px;
-    margin-bottom: 80px;
-}
-
-.destinos {
-    background-color: #d4a137;
-    padding: 20px;
-    color: white;
-    font-family: Arial, sans-serif;
-    width: 1012px;
-    height: 980px;
-    border-radius: 65px;
-    margin: 0 auto;
-}
-
-.tema {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 48px;
-}
-
-h4 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.lugares {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-
-}
-
-.lugar {
-    display: flex;
-    text-align: left;
-}
-
-.topicos {
-    text-align: left;
-    margin-top: 50px;
-}
-
-.icon-destinos {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.km, .minutos {
-    margin: 0;
-}
-
-
+/*-------------------------------Inicio style footer ------------------------*/
 hr {
-    margin-top: 50px;
-}
-
-.fotos h1 {
-    text-align: center;
-    margin-top: 100px;
-    font-size: 92px;
-    color: var(--cor-fonte);
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    border-color: #D9A530;
 }

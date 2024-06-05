@@ -1,48 +1,103 @@
 * {
     margin: 0 auto;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
+    padding: 0
 }
 
+
 body {
-    background-color: #2F4F4E;
+    background-color: var(--cor-segundaria);
+}
+
+:root {
+    --cor-principal: rgba(44, 44, 44);
+    --cor-navbar: rgba(44,44,44, 0.25);
+    --cor-segundaria: #2f4f4e;
+    --cor-de-destaque: #d9a530;
+    --cor-fonte: #f9ebd7;
+}
+
+/*------------------------------------------NavBar--------------------------------*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 100%;
+    background-color: var(--cor-navbar);
+    color: var(--cor-fonte);
+}
+
+.logo_nav {
+    width: 142px;
+    height: 82px;
+    margin-left: 102px;
+    margin-top: 1px;
+}
+
+.links_container {
+    display: flex;
+    align-items: center;
+    font-weight:100;
+    gap: 25px; 
+    margin-right: 33px;
+}
+
+.links_nav {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.links_nav:hover {
+    text-decoration: underline; 
+}
+
+.icon_login_nav {
+    width: 55px;
+    height: 55px;
+    margin-right: 33.5px; 
+    border-radius: 50%;
+}
+
+/*------------------------------------------Text--------------------------------*/
+.information {
+     position: relative;
 }
 
 .text1 {
-    position: absolute;
+    position: relative;
     width: 480px;
     height: 28px;
-    left: 127px;
-    top: 196px;
+    left: -130px;
+    top: 120px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 23px;
+    font-size: 20px;
     line-height: 28px;
     color: #D9A530;
 }
 
 .hotel {
-    position: absolute;
+    position: relative;
     width: 782px;
     height: 191px;
-    left: 118px;
-    top: 236px;
+    top: 80px;
+
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 200px;
     line-height: 244px;
+
     color: #F9EBD7;
 }
 
 .sub-text {
-    position: absolute;
+    position: relative;
     width: 758px;
     height: 101px;
-    left: 127px;
-    top: 470px;
+    top: 100px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -53,19 +108,27 @@ body {
 
 /* ---------------------------------------Card Styles ----------------------------------------- */
 
-.card {
-    display: flex;
-    max-width: 600px;
-    width: 100%;
-    background-color: #2C2C2C;
+.card-container {
+    position: relative;
+    top: 100px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-segundaria);
+    font-family: 'Montserrat';
+}
+
+.card {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background-color: #2C2C2C;
+    margin-top: 30px;
     overflow: hidden;
-    margin-top: 500px;
+    border-radius: 20px;
 }
 
 .card-image img {
-    width: 200px;
+    width: 300px;
     height: 100%;
     object-fit: cover;
 }
@@ -126,6 +189,13 @@ body {
 }
 
 /* --------------------------------------- Footer ----------------------------------------- */
+.logo {
+   position: relative;
+   display: flex;
+   width: 30%;
+   top: 180px;
+}
+
 hr {
     display: block;
     height: 1px;
@@ -136,7 +206,85 @@ hr {
     border-color: #D9A530;
 }
 
-footer {
+.rodape {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 300px;
+    color: #F9EBD7;
+    font-family: 'Montserrat';
+
+}
+
+.footer-container {
+    justify-content: flex-start;
+    background-color: var(--cor-segundaria);
+    padding: 20px;  
+}
+
+.support, .social-media, .shortcuts, .locations {
+    margin-bottom: 20px;
+}
+
+.support-button, .social-media-button, .shortcuts-button {
+    background-color: #D9A530;
+    color: #2F4F4E;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.support p, .phone-number {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.location {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+.location .city {
+    font-weight: bold;
+    color: var(--cor-de-destaque);
+}
+
+.location .details {
+    margin: 5px 0;
     color: #F9EBD7;
 }
 
+
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-icons span {
+    color: #F9EBD7;
+    font-weight: bold;
+}
+
+.shortcuts .links {
+    gap: 10px;
+}
+
+.shortcuts .links a {
+    color: #F9EBD7;
+    text-decoration: none;
+    font-weight: bold;
+}
