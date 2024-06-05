@@ -273,6 +273,11 @@ hr {
     margin-top: 50px;
 }
 
+.fotos img {
+    display: block;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+}
+
 .fotos h1 {
     text-align: center;
     margin-top: 100px;
