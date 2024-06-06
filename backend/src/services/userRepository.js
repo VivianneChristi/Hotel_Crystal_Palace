@@ -1,5 +1,7 @@
+const { randomInt } = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { parse } = require('querystring');
 
 const fileName = 'users.json';
 const filePath = path.join(__dirname, "..", "database", fileName);
@@ -52,6 +54,7 @@ class usersRepository {
 
     static async createUser(user) {
         const users = await this.getAllUsers();
+        user.token = await this.gerarToken();
         user.id = users.length + 1;
         users.push(user);
         const insertDB = await this.writeUsersToFile(users);
@@ -85,9 +88,61 @@ class usersRepository {
     }
 
 
+    static async updatePassword(user) {
+        const validar = await this.verificar(user);
+
+        return validar
+
+    };
+
+    static async verificar(user) {
+
+        const users = await this.getUser();
+
+        const nomeIs = await users.find(n => n.nome === (nome));
+
+        if (nomeIs === true) {
+
+            const emailIs = await users.find(e => e.email === (email));
+
+            if (emailIs === true) {
+
+                const tokenIs = await users.find(t => t.token === (token));
+
+                if (tokenIs === true) {
+
+                    return true;
+
+                } else {
+
+                    return false;
+
+                }
+
+            } else {
+
+                return false;
+            }
+
+        } else {
+
+            return false;
+        }
+
+    }
 
 
-};
+
+    static async gerarToken() {
+
+        const randomNum = Math.floor(Math.random() * 999999);
+        return randomNum;
+    };
+
+
+}
+
+
 
 
 
