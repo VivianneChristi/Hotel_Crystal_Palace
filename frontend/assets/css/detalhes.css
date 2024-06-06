@@ -273,14 +273,85 @@ hr {
     margin-top: 50px;
 }
 
-.fotos img {
-    display: block;
-    margin-bottom: 20px; /* Ajuste conforme necessário */
+.fotos {
+    text-align: center;
 }
 
 .fotos h1 {
-    text-align: center;
     margin-top: 100px;
     font-size: 92px;
     color: var(--cor-fonte);
+}
+
+.imagem-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de largura igual */
+    grid-gap: 5px; /* Ajusta o espaçamento entre as imagens */
+    justify-items: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Centraliza as imagens verticalmente */
+    gap: 25px;
+    padding: 20px; /* Espaçamento interno à esquerda e à direita */
+}
+
+.imagem-container img {
+    width: 70%; /* Ajusta o tamanho da imagem para caber no container */
+    height: auto;
+    border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+}
+.container {
+    background-color: #F5E9D7; /* Fundo bege */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1103px;
+    height: 248px;
+}
+
+.servicos {
+    text-align: center;
+}
+
+.servicos h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #355248; /* Cor de texto */
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-around;
+}
+
+.categoria {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.categoria h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #355248; /* Cor de texto */
+}
+
+.categoria ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categoria ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #355248; /* Cor de texto */
+}
+
+.categoria ul li i {
+    margin-right: 10px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
 }
