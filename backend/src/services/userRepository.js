@@ -92,72 +92,39 @@ class usersRepository {
 
         console.log(user);
 
+        const nome = user.nome;
+        const email = user.email;
+        const senha = user.senha;
+
+        console.log(nome);
+        console.log(email);
+        console.log(senha);
 
         const users = await this.getUser();
 
-        const nomeIs = await users.find(n => n.nome === (nome));
 
-        console.log(nomeIs)
-
-        if (nomeIs === true) {
-
-            const emailIs = await users.find(e => e.email === (email));
-
-            console.log(emailIs)
-
-        } else {
-
-            return false;
-        }
 
         return false;
 
     }
 
 
-    /*  static async updatePassword(user) {
-          const validar = await this.verificar(user);
-  
-          return validar
-  
-      };
-  
-      static async verificar(user) {
-  
-          const users = await this.getUser();
-  
-          const nomeIs = await users.find(n => n.nome === (nome));
-  
-          if (nomeIs === true) {
-  
-              const emailIs = await users.find(e => e.email === (email));
-  
-              if (emailIs === true) {
-  
-                  const tokenIs = await users.find(t => t.token === (token));
-  
-                  if (tokenIs === true) {
-  
-                      return true;
-  
-                  } else {
-  
-                      return false;
-  
-                  }
-  
-              } else {
-  
-                  return false;
-              }
-  
-          } else {
-  
-              return false;
-          }
-  
-      }
-  */
+    static async validarUser(user) {
+        console.log(user);
+
+        const nome = user.nome;
+        const email = user.email;
+        const senha = user.senha;
+
+        console.log(nome);
+        console.log(email);
+        console.log(senha);
+
+        const users = await this.getUser();
+
+    
+    }
+
 
 
     static async gerarToken() {
