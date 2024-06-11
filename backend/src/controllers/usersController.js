@@ -1,3 +1,4 @@
+
 const usersRepository = require('../services/userRepository');
 
 
@@ -30,10 +31,13 @@ exports.getUserById = async (req, res) => {
 
 exports.createUser = async (req, res) => {
     try {
-        const userSemValidar = await exports.validarUser(req, res);  // Chama a função validarUser
-        if (userSemValidar) {
+        const userSemValidacao = await exports.validarUser(req, res);  // Chama a função validarUser
+
+        if (userSemValidacao === true) {
             const user = await usersRepository.createUser(req.body);
             res.status(201).json(user);  // Retorna a resposta de sucesso se a criação do usuário passar
+        } else {
+            res.status(500).json({ Error: userSemValidacao });
         }
     } catch (err) {
         res.status(500).json({ error: err.toString() });  // Retorna a resposta de erro se algo der errado
@@ -45,12 +49,8 @@ exports.createUser = async (req, res) => {
 
 exports.validarUser = async (req, res) => {
     try {
-        const userSemValidar = await usersRepository.validarUser(req.body);
-        if (userSemValidar) {
-            return userSemValidar;  // Retorna o usuário se a validação passar
-        } else {
-            throw new Error('User validation failed');  // Lança uma exceção se a validação falhar
-        }
+        const validacaoUser = await usersRepository.validarUser(req.body);
+        return validacaoUser;  // Retorna o usuário se a validação passar
     } catch (err) {
         throw err;  // Repassa a exceção para ser capturada pela função chamadora
     }
@@ -61,11 +61,10 @@ exports.validarUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
     try {
         const user = await usersRepository.updateUser(req.params.id, req.body);
-
-        if (!user) {
-            res.status(404).json({ error: 'Usuário não encontrado' })
+        if (user) {
+            res.status(201).json(user);
         } else {
-            res.status(500).json(user);
+            res.status(404).json({ error: `Usuário não encontrado! ${user}` })
         }
     } catch (error) {
         res.status(500).json({ error: err.toString() });
@@ -86,23 +85,24 @@ exports.deleteUser = async (req, res) => {
         res.status(500).json({ error: err.toString() });
     }
 
+}
 
+exports.newPasswordUser = async (req, res) => {
 
-    /* exports.newPasswordUser = async (req, res) => {
- 
-         try {
-             const user = await usersRepository.updatePassword(req.params.id, req.body);
- 
-             if (!user) {
-                 res.status(404).json({ error: 'Usuário não encontrado' })
-             } else {
-                 res.status(500).json(user);
-             }
-         } catch (error) {
-             res.status(500).json({ error: err.toString() });
-         }
- 
-     }*/
+    try {
+        const user = await usersRepository.updatePassword(req.params.id, req.params.token, req.body);
 
+        console.log(user)
+
+        if (user === true) {
+            res.status(201).json({ msg: 'Senha alterada com sucesso!' })
+        } else {
+            res.status(500).json({ error: `${user}` });
+        }
+    } catch (error) {
+        res.status(500).json({ error: err.toString() });
+    }
 
 }
+
+
