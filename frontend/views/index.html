@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Adicione isto dentro da tag <head> do seu HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Home</title>
@@ -26,28 +29,40 @@
 
         <section id="conteudo_Principal">
             <h2 class="titulo_conteudo_Principal">
-                Descubra o luxo e o <br> conforto que você <br> merece
+                Descubra o luxo e o conforto que você <br> merece
             </h2>
             <div class="campo_de_busca_conteudo_Principal">
                 <p class="texto_campo_de_busca">
-                    Seu refúgio perfeito, onde cada detalhe importa, apenas a um click de <br> distancia
+                    Seu refúgio perfeito, onde cada detalhe importa, apenas a um click de distancia
                 </p>
                 <div class="selecao_campo_de_busca">
                     <img src="../assets/img/icon/icon-destino 1.png" alt="icone_de_afinete_de_localizacao"
                         class="icone_campo_de_busca">
-                    <p class="texto_perguta_campo_de_busca">Qual é seu destino?</p>
+                    <input type="text" placeholder="Digite seu destino" class="campo_input">
                     <img src="../assets/img/icon/icon-divisão.png" alt="" class="icon_divisão">
                     <img src="../assets/img/icon/icon-calendar 1.png" alt="icone_de_calendario"
                         class="icone_campo_de_busca">
-                    <p class="texto_perguta_campo_de_busca">Qual Período?</p>
+                    <input type="text" id="dateRange" placeholder="Selecione o período" class="campo_input">
                     <img src="../assets/img/icon/icon-divisão.png" alt="" class="icon_divisão">
                     <img src="../assets/img/icon/icon-peoples 1.png" alt="icone_de_pessoas"
                         class="icone_campo_de_busca">
-                    <p class="texto_perguta_campo_de_busca">Quantas Pessoas?</p>
-                    <button class="botao_campo_de_busca"><p class="text_botao"> Buscar</p> <img src="../assets/img/icon/icon-lupa 1.png" alt=""
-                            class="icone_botão_campo_de_busca">
+                    <select id="campo_selecao" class="campo_selecao" required>
+                        <option value="" disabled selected hidden>Quantas pessoas?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5+</option>
+                    </select>
+                    <button class="botao_campo_de_busca">
+                        <p class="text_botao">Buscar</p>
+                        <img src="../assets/img/icon/icon-lupa 1.png" alt="" class="icone_botao_campo_de_busca">
                     </button>
                 </div>
+                <div id="resultado_busca" style="display: none;">
+                    <!-- Aqui será exibida a lista de resultados da busca -->
+                </div>
+
             </div>
         </section>
 
@@ -61,41 +76,48 @@
         </h2>
 
         <p class="paragrafro_conteudo_informativo">A rede Crystal representa hospitalidade excepcional, oferecendo
-            hotéis, resorts e experiências de alto padrão, <span class="paragrafro_conteudo_informativo_span">com um compromisso firme com o
-                profissionalismo.</span></p>
+            hotéis, resorts e experiências de alto padrão, <span class="paragrafro_conteudo_informativo_span">com um
+                compromisso firme com o profissionalismo.</span></p>
 
-                <button class="botão_conteudo_informativo" href="hoteis.html" role="link"> Conheça os Hotéis </button>
+        <a href="hoteis.html" class="link_botao">
+            <button class="botão_conteudo_informativo">Conheça os Hotéis</button>
+        </a>'
 
         <div class="container_amarelo">
             <h6 class="paragrafo_container_amarelo">Estamos presentes onde você estiver.</h6>
             <h2 class="titulo_container_amarelo">Conheça os nossos destinos</h2>
-
             <p class="paragrafo_legenda_titulo_container_amarelo">Independente do destino, a Crystal oferece as melhores
-                opções
-                de estadia para você aproveitar ao máximo sua experiência. </p>
+                opções de estadia para você aproveitar ao máximo sua experiência.</p>
+
+            <div class="hoteis_conteudo_informativo">
+                <div class="Hotel_Rj">
+                    <img src="../assets/img/Img_Rio_de_Janeiro.png" alt="Rio de Janeiro" class="img_hoteis_Rj">
+
+                    <div class="textos_cards_hoteis">
+                        <h3 class="titulo_card_hotel">Rio de <br>Janeiro</h3>
+                        <p class="quantidade_hotel">Hotéis: 3</p>
+                    </div>
+
+                </div>
+                <div class="Hotel_Bh">
+                    <img src="../assets/img/Img_Belo_Horizonte.png" alt="Belo Horizonte" class="img_hoteis_Bh">
+                    <div class="textos_cards_hoteis">
+                        <h3 class="titulo_card_hotel">Belo <br>Horizonte</h3>
+                        <p class="quantidade_hotel">Hotéis: 1</p>
+                    </div>
+                </div>
+                <div class="Hotel_Pe">
+
+                    <img src="../assets/img/Img_Pernambuco.png" alt="Pernambuco" class="img_hoteis_Pe">
+                    <div class="textos_cards_hoteis_Pe">
+                        <h3 class="titulo_card_hotel_Pe">Pernambuco</h3>
+                        <p class="quantidade_hotel_Pe">Hotéis: 2</p>
+                    </div>
+
+                </div>
+            </div>
         </div>
-
-        <div class="hoteis_conteudo_informativo">
-            <div class="Hotel_Rj">
-                <img src="../assets/img/Img_Rio_de_Janeiro.png" alt="">
-                <h3 class="titulo_card_hotel">Rio de Janeiro</h3>
-                <p class="quantidade_hotel">Hotéis: 3</p>
-            </div>
-
-
-            <div class="Hotel_Bh">
-                <img src="../assets/img/Img_Belo_Horizonte.png" alt="">
-                <h3 class="titulo_card_hotel">Belo Horizonte</h3>
-                <p class="quantidade_hotel">Hotéis: 1</p>
-            </div>
-
-            <div class="Hotel_Pb">
-                <img src="../assets/img/Img_Pernambuco.png" alt="">
-                <h3 class="titulo_card_hotel">Pernambuco</h3>
-                <p class="quantidade_hotel">Hotéis: 2</p>
-            </div>
         </div>
-
     </section>
 
     <section class="area_promocoes">
@@ -104,12 +126,14 @@
             selecionadas,
             garantindo experiências memoráveis a preços especiais.</p>
 
-        <div class="card_area_promocao_um">
+        <div class="cartoes_area_promocao">
+            <div class="card_area_promocao_um">
 
-        </div>
+            </div>
 
-        <div class="card_area_promocao_dois">
+            <div class="card_area_promocao_dois">
 
+            </div>
         </div>
     </section>
 
@@ -196,6 +220,8 @@
 
         </div>
     </footer>
+
+    <script src="../assets/js/script.js"></script>
 
 </body>
 
