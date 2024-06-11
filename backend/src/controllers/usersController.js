@@ -1,3 +1,4 @@
+
 const usersRepository = require('../services/userRepository');
 
 
@@ -60,11 +61,10 @@ exports.validarUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
     try {
         const user = await usersRepository.updateUser(req.params.id, req.body);
-
-        if (!user) {
-            res.status(404).json({ error: 'Usuário não encontrado' })
-        } else {
+        if (user) {
             res.status(201).json(user);
+        } else {
+            res.status(404).json({ error: `Usuário não encontrado! ${user}` })
         }
     } catch (error) {
         res.status(500).json({ error: err.toString() });
@@ -85,23 +85,24 @@ exports.deleteUser = async (req, res) => {
         res.status(500).json({ error: err.toString() });
     }
 
+}
 
+exports.newPasswordUser = async (req, res) => {
 
-    /* exports.newPasswordUser = async (req, res) => {
- 
-         try {
-             const user = await usersRepository.updatePassword(req.params.id, req.body);
- 
-             if (!user) {
-                 res.status(404).json({ error: 'Usuário não encontrado' })
-             } else {
-                 res.status(500).json(user);
-             }
-         } catch (error) {
-             res.status(500).json({ error: err.toString() });
-         }
- 
-     }*/
+    try {
+        const user = await usersRepository.updatePassword(req.params.id, req.params.token, req.body);
 
+        console.log(user)
+
+        if (user === true) {
+            res.status(201).json({ msg: 'Senha alterada com sucesso!' })
+        } else {
+            res.status(500).json({ error: `${user}` });
+        }
+    } catch (error) {
+        res.status(500).json({ error: err.toString() });
+    }
 
 }
+
+

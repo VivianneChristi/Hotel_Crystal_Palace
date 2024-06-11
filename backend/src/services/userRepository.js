@@ -71,9 +71,18 @@ class usersRepository {
             return null;
         }
         users[index] = user;
-        const updateDB = await this.writeUsersToFile(users);
-        return updateDB;
 
+        const userValido = await this.validarUser(user);
+
+
+        console.log(userValido)
+
+        if (userValido === true) {
+            const updateDB = await this.writeUsersToFile(users);
+            return updateDB;
+        }
+
+        return userValido
     }
 
     static async deleteUser(id) {
@@ -93,6 +102,7 @@ class usersRepository {
 
         const nome = user.nome;
         var respostaNome = await this.validarNome(nome);
+
 
         if (respostaNome !== true) {
             return respostaNome;
@@ -127,6 +137,7 @@ class usersRepository {
             return true;
         }
 
+
         return isInvalid;
     }
 
@@ -159,8 +170,6 @@ class usersRepository {
                 tamanho++
             }
 
-            console.log(email)
-
             const provedores = [
                 'gmail.com',
                 'outlook.com',
@@ -173,8 +182,6 @@ class usersRepository {
             const temProvedorValido = provedores.some(provedor => email.includes(provedor));
 
             if (temProvedorValido) {
-
-                console.log(tamanho);
 
                 if (tamanho <= 14) {
                     mensagemErro += 'Email não atingiu mínimo de caracteres.'
@@ -211,16 +218,15 @@ class usersRepository {
         for (let index = 0; index < senha.length; index++) {
             const caracter = senha[index];
 
-
             if (caracter === ' ') {
 
                 mensagemErro += 'Uso indevido de espaço.'
 
                 return mensagemErro;
             }
-
-            tamanho++;
+            tamanho = index + 1;
         }
+
 
         if (tamanho < 4) {
             mensagemErro += 'A senha deve conter entre 4 e 8 caracteres.'
@@ -234,25 +240,6 @@ class usersRepository {
 
 
         return true;
-    }
-
-    static async validarToken(token, user) {
-
-        const users = await this.getUser();
-        const validacaoToken = users.find(p => p.token === token);
-        const contagem = 0;
-
-        if (contagem > 5) {
-            // this.deleteUser(user.id)
-            return 'Você excedeu o número de tentativas! Seu cadastro foi Bloqueado!'
-        }
-
-
-        if (validacaoToken !== undefined) {
-            return true;
-        }
-
-        return 'Token inválido! digite o token que recebeu ao se cadastrar'
     }
 
     static async verificarCaracteres(nome, mensagemErro) {
@@ -302,6 +289,58 @@ class usersRepository {
         const randomNum = Math.floor(Math.random() * 999999);
         return randomNum;
     };
+
+    static async updatePassword(id, token, newPassword) {
+
+        console.log(id)
+        console.log(newPassword)
+
+        const users = await this.getUserById(id);
+
+        console.log(users);
+
+        const tokenUser = await this.validarToken(token, users);
+
+        console.log(tokenUser)
+
+        const senhaValida = await this.validarSenha(newPassword)
+
+        console.log(senhaValida)
+        /*
+                if (senhaValida) {
+                    const index = users.find(p => p.senha === senhaUser);
+        
+                    console.log(index)
+                    if (index === -1) {
+                        return 'Usuário não encontrado';
+                    }
+        
+        
+                    return true;
+                }
+        */
+
+        return senhaValida
+    }
+
+    static async validarToken(token, user) {
+
+        // terminar validação do token => terminar validação da nova senha
+        //const contagem = 0;
+
+        console.log(token)
+        console.log(user)
+
+        //const validacaoToken = user.find(p => p.token === token);
+
+        //console.log(validacaoToken)
+
+        /*if (validacaoToken !== undefined) {
+            return true;
+        }*/
+
+        return false;
+    }
 
 
 }
