@@ -178,6 +178,68 @@ body {
 .botao_campo_de_busca:hover {
     background-color: #263f3e;
 }
+#resultado_busca .quarto {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--cor-fonte);
+    box-shadow: 0 2px 5px #2f4f4ea1;
+}
+
+.quarto_card {
+    display: flex;
+    align-items: center;
+}
+
+.quarto_imagem {
+    display: flex;
+    justify-content: left;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.quarto_detalhes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quarto_nome {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quarto_camas {
+    font-size: 14px;
+    color: #666;
+}
+
+.quarto_preco {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.quarto_button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.quarto_button:hover {
+    background-color: #0056b3;
+}
 
 
 .conteudo_informativo {

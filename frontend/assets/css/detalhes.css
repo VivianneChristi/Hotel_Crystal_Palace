@@ -304,7 +304,9 @@ hr {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 1103px;
-    height: 248px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
 }
 
 .servicos {
@@ -320,6 +322,8 @@ hr {
 .categorias {
     display: flex;
     justify-content: space-around;
+    text-align: left;
+
 }
 
 .categoria {
@@ -354,4 +358,52 @@ hr {
     width: 24px;
     height: 24px;
     display: inline-block;
+}
+
+.gastronomia {
+    padding: 40px;
+    color: white;
+}
+
+.gastronomia .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gastronomia img {
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+}
+
+.gastronomia .text-content {
+    max-width: 500px;
+}
+
+.gastronomia h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.gastronomia h1 i {
+    margin-right: 10px;
+}
+
+.gastronomia h2 {
+    font-size: 1.5em;
+    color: #d4a137;
+}
+
+.gastronomia p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.gastronomia .note {
+    font-size: 0.8em;
+    color: #f9ebd7;
 }
