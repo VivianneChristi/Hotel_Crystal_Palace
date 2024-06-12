@@ -80,12 +80,13 @@ body {
     align-content: start;
     flex-direction: column;
     margin-right: 223px;
+    margin-top: 10px;
     color: var(--cor-fonte);
 }
 
 .titulo_conteudo_Principal {
     width: 1299px;
-    height: 171px;
+    height: 140px;
     margin: 230px 0 0 99px;
     font-size: 60px;
     font-weight: 100;
@@ -178,69 +179,103 @@ body {
 .botao_campo_de_busca:hover {
     background-color: #263f3e;
 }
+
 #resultado_busca .quarto {
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     padding: 10px;
     margin: 10px 0;
+    margin-top: 4%;
     background-color: var(--cor-fonte);
     box-shadow: 0 2px 5px #2f4f4ea1;
+    align-items: center;
 }
 
 .quarto_card {
     display: flex;
+    width: 100%;
+    height: 115px;
+    flex-direction: row;
     align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 26px;
+    border-radius: 10px;
 }
 
 .quarto_imagem {
-    display: flex;
-    justify-content: left;
-    width: 100px;
-    height: 100px;
+    width: 327px;
+    height: auto;
+    border-radius: 10px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-right: 10px;
 }
 
 .quarto_detalhes {
     display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.quarto_info {
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 5px;
+    width: 200px;
+    /* Ajuste a largura conforme necessário */
 }
 
 .quarto_nome {
     font-size: 18px;
     font-weight: bold;
-    margin: 0;
+    color: var(--cor-segundaria);
+    margin-bottom: 8px;
 }
 
-.quarto_camas {
-    font-size: 14px;
-    color: #666;
+.quarto_preco_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    /* Ajuste a margem conforme necessário */
+}
+
+.titulo_quarto_preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cor-segundaria);
+    margin-bottom: 8px;
 }
 
 .quarto_preco {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    color: #333;
+    color: var(--cor-segundaria);
+    margin-top: 0;
+    /* Remova o espaço superior para evitar espaço extra */
 }
 
 .quarto_button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    width: 229px;
+    height: 41px;
+    border-radius: 50px;
+    margin-left: 14px;
+    color: var(--cor-fonte);
+    background-color: var(--cor-segundaria);
+    border: none;
+    cursor: pointer;
 }
 
 .quarto_button:hover {
-    background-color: #0056b3;
+    background-color: #1b2d2d;
 }
-
 
 .conteudo_informativo {
     display: flex;
@@ -563,7 +598,6 @@ hr {
 
 
 /*-------------------------------Inicio style footer ------------------------*/
-
 .logo {
     position: relative;
     display: flex;
@@ -581,17 +615,30 @@ hr {
     border-color: #D9A530;
 }
 
+.central-reservas {
+    position: absolute;
+    top: 240px;
+    left: 40px;
+}
+
+.phone-number {
+    position: relative;
+    top: 23px;
+    left: 40px;
+}
+
 .rodape {
     position: relative;
     width: 100%;
     height: auto;
-    top: 300px;
+    top: 30px;
     color: #F9EBD7;
     font-family: 'Montserrat';
-
 }
 
 .footer-container {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     background-color: var(--cor-segundaria);
     padding: 20px;
@@ -625,13 +672,15 @@ hr {
 
 .locations {
     display: flex;
-    flex-wrap: wrap;
-
 }
 
-.location {
-    width: 50%;
-    margin-bottom: 20px;
+.column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.locations .column:first-child {
+    margin-left: 30px;
 }
 
 
@@ -645,6 +694,32 @@ hr {
     color: #F9EBD7;
 }
 
+.social-media-button {
+    color: var(--cor-fonte);
+    width: 450px;
+    position: absolute;
+    top: 630px;
+    left: 50px;
+}
+
+.social-icons {
+    position: absolute;
+    left: 100px;
+    justify-content: space-around;
+    margin-top: 10px;
+    /* Adicionando margem para separar dos botões */
+}
+
+.site {
+    position: absolute;
+    left: 200px;
+    color: var(--cor-de-destaque);
+}
+
+.shortcuts .links {
+    margin-top: 10px;
+    /* Adicionando margem para separar dos botões */
+}
 
 .social-icons {
     margin-bottom: 30px;
@@ -653,16 +728,29 @@ hr {
 .social-icons img {
     width: 24px;
     height: 24px;
+    margin-right: 10px;
 }
 
 .social-icons span {
-    color: #F9EBD7;
     font-weight: bold;
 }
 
-.shortcuts .links {
-    gap: 10px;
+.shortcuts-button {
+    color: var(--cor-fonte);
+    position: absolute;
+    top: 630px;
+    left: 750px;
 }
+
+.shortcuts .links {
+    position: relative;
+    left: 750px;
+}
+
+.links a {
+    margin-right: 30px;
+}
+
 
 .shortcuts .links a {
     color: #F9EBD7;
