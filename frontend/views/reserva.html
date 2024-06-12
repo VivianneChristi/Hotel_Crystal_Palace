@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reserva.css">
-    <title>Confirmar</title>
+    <title>Reserva</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <p>Barra da Tijuca, RJ</p>
             <p><b>Valor</b></p>
             <p>R$850,50</p>
-            <button class="voltar" type="submit"><a href="index.html">Escolher outro pacote</a></button>
+            <button class="voltar" type="submit"><a href="index.ejs">Escolher outro pacote</a></button>
 
         </section>
 
@@ -43,7 +43,7 @@
             <h2>Informações do contratante</h2>
             <form action="#">
                 <input type="text" id="name" name="name" placeholder="Nome do contratente">
-                <input type="number" id="birthdate" name="birthdate" placeholder="Número de telefone">
+                <input type="text" id="birthdate" name="birthdate" class="phone-input" placeholder="Número de telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" title="Formato: xx-xxxxx-xxxx">
                 <input type="text" id="cpf" name="cpf" placeholder="CPF">
 
                 <p class="notice">* Menores de idade devem estar acompanhados por pelo menos um responsável legal
@@ -51,7 +51,7 @@
                 <p class="notice">* Os demais hóspedes, além do contratante do quarto, devem se cadastrar na entrada do
                     hotel, apresentando um documento de identidade oficial com foto.</p>
 
-                <button class="continuar" type="submit">Continuar</button>
+                <button class="continuar" type="submit"><a class="continuar" href="confirmacao.html">Confirmar estádia</a></button>
             </form>
         </section>
     </main>

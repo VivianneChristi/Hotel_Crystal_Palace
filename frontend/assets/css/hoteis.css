@@ -10,7 +10,7 @@ body {
 
 :root {
     --cor-principal: rgba(44, 44, 44);
-    --cor-navbar: rgba(44,44,44, 0.25);
+    --cor-navbar: rgba(44, 44, 44, 0.25);
     --cor-segundaria: #2f4f4e;
     --cor-de-destaque: #d9a530;
     --cor-fonte: #f9ebd7;
@@ -37,8 +37,8 @@ body {
 .links_container {
     display: flex;
     align-items: center;
-    font-weight:100;
-    gap: 25px; 
+    font-weight: 100;
+    gap: 25px;
     margin-right: 33px;
 }
 
@@ -49,19 +49,19 @@ body {
 }
 
 .links_nav:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .icon_login_nav {
     width: 55px;
     height: 55px;
-    margin-right: 33.5px; 
+    margin-right: 33.5px;
     border-radius: 50%;
 }
 
 /*------------------------------------------Text--------------------------------*/
 .information {
-     position: relative;
+    position: relative;
 }
 
 .text1 {
@@ -190,10 +190,10 @@ body {
 
 /* --------------------------------------- Footer ----------------------------------------- */
 .logo {
-   position: relative;
-   display: flex;
-   width: 30%;
-   top: 180px;
+    position: relative;
+    display: flex;
+    width: 30%;
+    top: 180px;
 }
 
 hr {
@@ -219,14 +219,19 @@ hr {
 .footer-container {
     justify-content: flex-start;
     background-color: var(--cor-segundaria);
-    padding: 20px;  
+    padding: 20px;
 }
 
-.support, .social-media, .shortcuts, .locations {
+.support,
+.social-media,
+.shortcuts,
+.locations {
     margin-bottom: 20px;
 }
 
-.support-button, .social-media-button, .shortcuts-button {
+.support-button,
+.social-media-button,
+.shortcuts-button {
     background-color: #D9A530;
     color: #2F4F4E;
     border: none;
@@ -237,7 +242,8 @@ hr {
     margin-bottom: 10px;
 }
 
-.support p, .phone-number {
+.support p,
+.phone-number {
     margin: 5px 0;
     font-size: 16px;
 }
@@ -245,7 +251,7 @@ hr {
 .locations {
     display: flex;
     flex-wrap: wrap;
-   
+
 }
 
 .location {
@@ -288,3 +294,215 @@ hr {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* --------------------------------------- Responsive ----------------------------------------- */
+
+/* Responsividade Tablet */
+@media (max-width: 1024px) {
+
+    /* Nav_bar */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        max-width: 100%;
+
+
+        position: absolute;
+        width: 1024px;
+        height: 84px;
+        left: 0px;
+        top: 0px;
+
+        background: rgba(44, 44, 44, 0.25);
+
+        background-color: var(--cor-navbar);
+        color: var(--cor-fonte);
+    }
+
+    .logo_nav {
+        /* Logo */
+        position: absolute;
+        width: 146.47px;
+        height: 82px;
+        left: 64.75px;
+        top: 9px;
+
+        background: url(image.png);
+
+    }
+
+    .links_container {
+        display: flex;
+        align-items: center;
+        font-weight: 100;
+        gap: 25px;
+        margin-right: 33px;
+    }
+
+    .links_nav {
+        color: var(--cor-fonte);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .links_nav:hover {
+        text-decoration: underline;
+    }
+
+    .icon_login_nav {
+        position: relative;
+        width: 45.46px;
+        height: 45px;
+        left: 935.2px;
+        top: 19px;
+
+        background: url(Icon_Login.png);
+
+        margin-right: 33.5px;
+        border-radius: 50%;
+    }
+
+    /*------------------------------------------Text--------------------------------*/
+    .information {
+        position: relative;
+    }
+
+    .text1 {
+        /* TEMOS A OPÇÃO PERFEITA PARA VOCÊ */
+        position: absolute;
+        width: 480px;
+        height: 28px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28px;
+        /* identical to box height */
+
+        color: #D9A530;
+    }
+
+    .hotel {
+        /* HOTÉIS */
+        position: absolute;
+        width: 782px;
+        height: 191px;
+        left: 118px;
+        top: 236px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 200px;
+        line-height: 244px;
+
+        color: #F9EBD7;
+    }
+
+    .sub-text {
+        /* Seja para viagens de negócios ou lazer, nossas opções de hospedagem são perfeitas para oferecer conforto, qualidade e luxo. */
+
+        position: absolute;
+        width: 758px;
+        height: 101px;
+        left: 127px;
+        top: 470px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28px;
+
+        color: #F9EBD7;
+    }
+
+    /* ---------------------------------------Card Styles ----------------------------------------- */
+
+.card-container {
+    position: relative;
+    top: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-segundaria);
+    font-family: 'Montserrat';
+}
+
+.card {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background-color: #2C2C2C;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-image img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: #D9A530;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    color: #F9EBD7
+}
+
+.card-content p {
+    margin: 10px 0;
+    color: #F9EBD7
+}
+
+.card-content button {
+    padding: 10px 20px;
+    background-color: #2C2C2C;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    border: 1px solid #D9A530;
+    cursor: pointer;
+}
+
+.card-content button:hover {
+    transition: 0.5s;
+    background-color: #D9A530;
+}
+
+.rectangle {
+    /* Rectangle 1 */
+    position: absolute;
+    width: 280px;
+    height: 30px;
+
+    color: #F9EBD7;
+    background-color: #2F4F4E;
+    border-radius: 15px;
+
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+    /* Ajustado para mais espaçamento entre os itens */
+    color: #F9EBD7;
+    margin-bottom: 10px;
+
+}
+
+}
+
+/* Responsividade Mobile */
+@media (max-width: 430px) {}

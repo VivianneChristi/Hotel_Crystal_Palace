@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 quartoDiv.innerHTML = `
                     <div class="quarto_card">
-                        <img src="../assets/img/Cama_do_hotel.png" alt="${quarto.nome}" class="quarto_imagem">
+                        <img src="/img/Cama_do_hotel.png" alt="${quarto.nome}" class="quarto_imagem">
                         <div class="quarto_detalhes">
                             <div class="quarto_info">
                                 <h2 class="quarto_nome">${quarto.nome}</h2>

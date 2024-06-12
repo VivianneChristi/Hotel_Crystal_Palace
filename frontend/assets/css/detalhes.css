@@ -363,6 +363,7 @@ hr {
 .gastronomia {
     padding: 40px;
     color: white;
+    margin-top: 80px;
 }
 
 .gastronomia .content {
@@ -374,7 +375,7 @@ hr {
 
 .gastronomia img {
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
     height: auto;
 }
 
@@ -385,11 +386,12 @@ hr {
 .gastronomia h1 {
     display: flex;
     align-items: center;
-    font-size: 2.5em;
+    font-size: 50px;
     margin: 0;
+    color: var(--cor-fonte);
 }
 
-.gastronomia h1 i {
+.gastronomia h1      {
     margin-right: 10px;
 }
 
@@ -407,3 +409,83 @@ hr {
     font-size: 0.8em;
     color: #f9ebd7;
 }
+
+
+.gastronomia .icon-utensils {
+    width: 70px;
+}
+
+.container {
+    padding: 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.header img {
+    margin-right: 10px;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    background-color: #30554F;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 20px;
+    color: #fff;
+}
+.card-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.card-details div {
+    display: flex;
+    align-items: center;
+}
+.card-details img {
+    margin-right: 5px;
+}
+.card-cashback {
+    background-color: #DDECE7;
+    color: #30554F;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.card-button {
+    display: flex;
+    justify-content: center;
+}
+.card-button button {
+    background-color: #F8E6D1;
+    color: #30554F;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.card-button button:hover {
+    background-color: #30554F;
+    color: #F8E6D1;
+}   

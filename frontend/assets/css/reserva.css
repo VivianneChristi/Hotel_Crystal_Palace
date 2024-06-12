@@ -184,3 +184,7 @@ main h1 {
     border: 0px;
     transition: all .5s;
 }
+.continuar {
+    text-decoration: none;
+    color: var(--cor-principal);
+}
