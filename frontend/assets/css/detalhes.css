@@ -3,6 +3,7 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 /*-------------------------------Variaveis Css ------------------------*/
@@ -34,8 +35,6 @@ body {
 .logo_nav {
     width: 142px;
     height: 82px;
-    margin-left: 102px;
-    margin-top: 1px;
 }
 
 .links_container {
@@ -43,7 +42,6 @@ body {
     align-items: center;
     font-weight: 100;
     gap: 25px;
-    margin-right: 33px;
 }
 
 .links_nav {
@@ -59,103 +57,24 @@ body {
 .icon_login_nav {
     width: 55px;
     height: 55px;
-    margin-right: 33.5px;
     border-radius: 50%;
 }
 
 /*-------------------------------Inicio style Conteudo Principal ------------------------*/
 .container_pai {
     width: 100%;
-    height: 748px;
+    height: 100vh;
     background-image: url(../img/img-arealazer1.png);
     background-size: cover;
     background-position: center;
 }
 
-.campo_de_busca_conteudo_Principal{
-    width: 960px;
-    height: 149px;
-    margin-left: 99px;
-    background-color: var(--cor-fonte);
-    color: var(--cor-principal);
-    border-radius: 15px;
-}
-
-
-.texto_campo_de_busca{
-    margin-top: 25px;
-    margin-left: 53px;
-    font-size: 20px;
-}
-
-.selecao_campo_de_busca{
-        display: flex;
-        margin-left: 23px;
-        margin-top: 5px;
-        text-align: center;
-}
-.icone_campo_de_busca{
-    width: 30px;
-    height: 30px;
-    margin-left: 23px;
-    margin-top: 5px;
-}
-
-.texto_perguta_campo_de_busca{
-    font-size: 20px;
-    margin-top: 8px;
-}
-
-
-.icon_divisão{
-    margin-left: 15px;
-    margin-right: 4px;
-    font-size: 20px;
-}
-
-.botao_campo_de_busca{
-    display: flex;
-    justify-content: center;    
-    width: 199px;
-    height: 36px;
-    border-radius: 50px;
-    margin-left: 14px;
-    color: var(--cor-fonte);
-    background-color: var(--cor-segundaria);
-}
-
-.text_botao{
-    text-align: center;
-    font-size: 20px;
-    margin-top: 7px;
-    margin-left: 14px;
-}
-
-.icone_botão_campo_de_busca{
-    width: 20px;
-    height: 20px;
-    margin-top: 7px;
-    margin-right: 9px;
-
-}
-
-
-.botao_campo_de_busca:hover{
-    background-color: #263f3e;
-    cursor: pointer;
-}
-
-
 #conteudo_Principal {
     color: var(--cor-fonte);
     background-color: rgba(30, 30, 30, 0.43);
-    margin-top: 185px;
-}
-
-#crystal-titulo {
-    font-size: 20px;
-    text-align: left;
-    color: #fff;
+    margin-top: 374px;
+    height: 100%;
+    padding: 20px;
 }
 
 #nomeDoHotel {
@@ -165,23 +84,22 @@ body {
 
 #localizacao {
     background-color: rgba(47, 79, 78, 0.61);
-    width: 332px;
-    height: 51px;
-    margin: 0;
+    width: fit-content;
+    padding: 10px 20px;
     border-radius: 50px;
     border: 1px solid #598B8A;
+    margin-top: 10px;
 }
 
 #cep {
     text-align: center;
-    margin: 10px;
 }
 
 .descricao {
     font-size: 20px;
     text-align: left;
     color: var(--cor-fonte);
-    margin: 70px 0 0 70px;
+    margin: 70px 20px;
 }
 
 #subnavbar {
@@ -209,24 +127,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: 50px 20px;
 }
 
 .iframe-container iframe {
-    max-width: 100%;
+    width: 100%;
+    height: 400px;
     border-radius: 45px;
-    margin-bottom: 80px;
 }
 
 .destinos {
-    background-color: #d4a137;
+    background-color: var(--cor-de-destaque);
     padding: 20px;
-    color: white;
+    color: var(--cor-fonte);
     font-family: Arial, sans-serif;
-    width: 1012px;
-    height: 980px;
+    width: 100%;
+    max-width: 1200px;
     border-radius: 65px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .tema {
@@ -245,12 +163,11 @@ h4 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-
 }
 
 .lugar {
     display: flex;
-    text-align: left;
+    align-items: center;
 }
 
 .topicos {
@@ -264,10 +181,10 @@ h4 {
     margin-right: 10px;
 }
 
-.km, .minutos {
+.km,
+.minutos {
     margin: 0;
 }
-
 
 hr {
     margin-top: 50px;
@@ -285,28 +202,30 @@ hr {
 
 .imagem-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de largura igual */
-    grid-gap: 5px; /* Ajusta o espaçamento entre as imagens */
-    justify-items: center; /* Centraliza as imagens horizontalmente */
-    align-items: center; /* Centraliza as imagens verticalmente */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
-    padding: 20px; /* Espaçamento interno à esquerda e à direita */
+    padding: 20px;
 }
 
 .imagem-container img {
-    width: 70%; /* Ajusta o tamanho da imagem para caber no container */
+    width: 100%;
     height: auto;
-    border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+    border-radius: 10px;
 }
-.container {
-    background-color: #F5E9D7; /* Fundo bege */
+
+.container,
+.container-servicos {
+    background-color: #F5E9D7;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 1103px;
-    height: 300px;
-    margin: 0 auto;
-    margin-top: 150px;
+    width: 100%;
+    max-width: 1103px;
+    margin: 20px auto;
+}
+
+.container-servicos {
+    height: auto;
 }
 
 .servicos {
@@ -316,25 +235,25 @@ hr {
 .servicos h1 {
     font-size: 48px;
     margin-bottom: 30px;
-    color: #355248; /* Cor de texto */
+    color: #355248;
 }
 
 .categorias {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: left;
-
 }
 
 .categoria {
     flex: 1;
-    margin: 0 20px;
+    margin: 20px;
 }
 
 .categoria h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #355248; /* Cor de texto */
+    color: #355248;
 }
 
 .categoria ul {
@@ -347,17 +266,14 @@ hr {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    color: #355248; /* Cor de texto */
-}
-
-.categoria ul li i {
-    margin-right: 10px;
+    color: #355248;
 }
 
 .icon {
     width: 24px;
     height: 24px;
     display: inline-block;
+    margin-right: 10px;
 }
 
 .gastronomia {
@@ -371,11 +287,13 @@ hr {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .gastronomia img {
     border-radius: 10px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
@@ -391,13 +309,13 @@ hr {
     color: var(--cor-fonte);
 }
 
-.gastronomia h1      {
+.gastronomia h1 {
     margin-right: 10px;
 }
 
 .gastronomia h2 {
     font-size: 1.5em;
-    color: #d4a137;
+    color: var(--cor-de-destaque);
 }
 
 .gastronomia p {
@@ -410,61 +328,64 @@ hr {
     color: #f9ebd7;
 }
 
-
 .gastronomia .icon-utensils {
     width: 70px;
 }
 
-.container {
-    padding: 20px;
-}
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Nunito', sans-serif;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-.header img {
-    margin-right: 10px;
-}
 .cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .card {
     background-color: #30554F;
     border-radius: 10px;
     overflow: hidden;
-    width: 30%;
+    width: 100%;
+    max-width: 30%;
+    margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .card img {
     width: 100%;
     height: auto;
 }
+
 .card-content {
     padding: 20px;
     color: #fff;
 }
+
 .card-title {
     font-family: 'Nunito', sans-serif;
-    font-size: 1.5em;
+    font-size: 35px;
+    text-align: center;
+    color: var(--cor-fonte);
     margin-bottom: 10px;
 }
+
 .card-details {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
 .card-details div {
     display: flex;
     align-items: center;
+    background-color: rgba(249, 235, 215, 0.3);
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
 }
+
 .card-details img {
     margin-right: 5px;
+    width: 20px;
 }
+
 .card-cashback {
     background-color: #DDECE7;
     color: #30554F;
@@ -472,10 +393,12 @@ hr {
     padding: 10px;
     margin-bottom: 20px;
 }
+
 .card-button {
     display: flex;
     justify-content: center;
 }
+
 .card-button button {
     background-color: #F8E6D1;
     color: #30554F;
@@ -485,7 +408,392 @@ hr {
     font-size: 1em;
     cursor: pointer;
 }
+
 .card-button button:hover {
     background-color: #30554F;
     color: #F8E6D1;
-}   
+}
+
+.acomodacao {
+    font-size: 45px;
+    color: var(--cor-segundaria);
+    text-align: center;
+}
+
+/* --------------------------------------- Footer ----------------------------------------- */
+.logo {
+    position: relative;
+    display: flex;
+    width: 30%;
+    top: 180px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    border-color: #D9A530;
+}
+
+.rodape {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 100px;
+    color: #F9EBD7;
+    font-family: 'Montserrat';
+
+}
+
+.footer-container {
+    justify-content: flex-start;
+    background-color: var(--cor-segundaria);
+    padding: 20px;
+}
+
+.support,
+.social-media,
+.shortcuts,
+.locations {
+    margin-bottom: 20px;
+}
+
+.support-button,
+.social-media-button,
+.shortcuts-button {
+    background-color: #D9A530;
+    color: #2F4F4E;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.support p,
+.phone-number {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.location {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+.location .city {
+    font-weight: bold;
+    color: var(--cor-de-destaque);
+}
+
+.location .details {
+    margin: 5px 0;
+    color: #F9EBD7;
+}
+
+
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-icons span {
+    color: #F9EBD7;
+    font-weight: bold;
+}
+
+.shortcuts .links {
+    gap: 10px;
+}
+
+.shortcuts .links a {
+    color: #F9EBD7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --------------------------------------- Responsive ----------------------------------------- */
+
+/* Responsividade Tablet */
+@media (min-width:744px) and (max-width: 1440px) {
+    .navbar {
+        font-size: 16px;
+        flex-direction: row;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .links_container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .logo_nav {
+        width: 100px;
+        height: 100px;
+    }
+
+
+
+    .text1 {
+        font-size: 16px;
+    }
+
+    .hotel {
+        font-size: 100px;
+    }
+
+    .sub-text {
+        font-size: 18px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-details div {
+        display: flex;
+        align-items: center;
+        background-color: rgba(249, 235, 215, 0.3);
+        padding: 5px;
+        border-radius: 20px;
+        font-size: 8px;
+    }
+
+    .imagem-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .destinos {
+        width: 95%;
+    }
+
+    .gastronomia img {
+        max-width: 200px;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+    .text1 {
+        margin-top: 60px;
+        font-size: 14px;
+    }
+
+    .hotel {
+        font-size: 80px;
+    }
+
+    .sub-text {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 18px;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .card-content button {
+        font-size: 14px;
+    }
+}
+
+/* --------------------------------------- Responsive ----------------------------------------- */
+
+/* Responsividade para Tablets */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 10 20;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links_container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #conteudo_Principal {
+        margin-top: 100px;
+    }
+
+    .descricao {
+        margin: 20px;
+    }
+
+    .iframe-container iframe {
+        height: 300px;
+    }
+
+    .categoria {
+        margin: 10px 0;
+    }
+
+    .gastronomia .content {
+        flex-direction: column;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 45%;
+    }
+
+    .rodape {
+        text-align: center;
+    }
+
+    .location {
+        width: 100%;
+    }
+}
+
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 480px) {
+    .logo_nav {
+        height: 60px;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .links_nav {
+        font-size: 16px;
+    }
+
+    #nomeDoHotel {
+        font-size: 48px;
+    }
+
+    #conteudo_Principal {
+        padding: 20px;
+    }
+
+    .descricao {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .iframe-container {
+        margin: 20px;
+    }
+
+    .iframe-container iframe {
+        height: 200px;
+    }
+
+    .lugares {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .gastronomia .content {
+        text-align: center;
+    }
+
+    .gastronomia img {
+        width: 100%;
+    }
+
+    .gastronomia h1 {
+        font-size: 36px;
+    }
+
+    .gastronomia h2 {
+        font-size: 1.2em;
+    }
+
+    .gastronomia p {
+        font-size: 0.9em;
+    }
+
+    .container-servicos,
+    .container {
+        padding: 20px;
+    }
+
+    .container-servicos {
+        height: auto;
+    }
+
+    .servicos h1 {
+        font-size: 24px;
+    }
+
+    .categoria h2 {
+        font-size: 20px;
+    }
+
+    .categoria ul li {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location {
+        width: 100%;
+    }
+
+    .support-button,
+    .social-media-button,
+    .shortcuts-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}

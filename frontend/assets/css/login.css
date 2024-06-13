@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+
 }
 
 /*-------------------------------Variaveis Css ------------------------*/
@@ -18,12 +19,16 @@ body {
   position: relative;
   width: 890px;
   height: 902px;
-  background: var(--cor-segundaria);
+  background: url(../img/Plano_de_Fundo.png);
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .main {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -45,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 14px;
+  gap: 38px;
   padding: 54px;
 }
 
@@ -87,7 +92,13 @@ option {
   display: none;
 }
 
-/*Login*/
+/*--------------------------------------------------- Login -------------------------------------------*/
+
+.logo {
+  position: relative;
+  width: 100%;
+}
+
 .login {
   position: relative;
   width: 100%;
@@ -96,7 +107,7 @@ option {
 }
 
 .login label {
-  margin: 10% 0 15%;
+  margin: 5% 0 12%;
 }
 
 label {
@@ -121,7 +132,7 @@ label {
   border: 1px solid #D9A530;
 }
 
-/*Register*/
+/*-------------------------------------------- Register ------------------------------*/
 .register {
   width: 100%;
   background: #eee;
@@ -170,6 +181,9 @@ label {
 }
 
 
+
+
+/*-------------------------------------------- Register ------------------------------*/
 
 /* Restante do CSS permanece o mesmo */
 
