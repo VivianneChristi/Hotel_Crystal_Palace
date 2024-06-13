@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 [{"nome":"Ruan","email":"testeRuan@gmail.com","senha":"123456","token":278014,"id":2},{"nome":"Raphael","email":"testefaelS@gmail.com","senha":"1234567","token":161238,"id":1},{"nome":"Raphael","email":"testefael@gmail.com","senha":"123456","token":200127,"id":3}]
+=======
+[{"nome":"Raphael","email":"testefael!@gmail.com","senha":"123456","token":161238,"id":1},{"nome":"Ruan","email":"testeRuan@gmail.com","senha":"123456","token":278014,"id":2},{"nome":"Raphael","email":"testefael@gmail.com","senha":"123456","token":551238,"id":3},{"nome":"Raphael","email":"testefaeldsaf@gmail.com","senha":"123456","token":886755,"id":4}]
+>>>>>>> Stashed changes
