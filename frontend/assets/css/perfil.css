@@ -3,8 +3,7 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    background-color: var(--cor-principal);
-
+    
 }
 
 /*-------------------------------Variaveis Css ------------------------*/
@@ -14,6 +13,14 @@
     --cor-segundaria: #2f4f4e;
     --cor-de-destaque: #d9a530;
     --cor-fonte: #f9ebd7;
+}
+
+body {
+    background: url(../img/Plano_de_Fundo.png);
+    background-color: black;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -63,9 +70,6 @@
 
 /*------------------------------------------- Imagem de Perfil ------------------------------*/
 .profile-pic {
-    /* Frame 1171275425 */
-
-    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -93,8 +97,8 @@
 .profile-pic img {
     position: absolute;
     object-fit: cover;
-    width: 170px;
-    height: 170px;
+    width: 190px;
+    height: 190px;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
     border-radius: 100px;
     z-index: 0;
@@ -102,8 +106,8 @@
 
 .profile-pic .-label {
     cursor: pointer;
-    height: 170px;
-    width: 170px;
+    height: 190px;
+    width: 190px;
 
 }
 
@@ -120,6 +124,7 @@
 }
 
 /*----------------------------------------- Perfil --------------------------------*/
+
 .info_name {
     display: flex;
     flex-direction: column;
@@ -190,28 +195,26 @@ label {
 
 /*-------------------------------------------- Botões -------------------------------*/
 .options {
-    display: flex;
-    position: relative;
-    gap: 40px;
-    top: 200px;
-
+    text-align:center; 
 }
 
 button {
-    padding: 15px 16px;
-    gap: 12px;
+    position: relative;
+    display:inline-block;
+    justify-content: space-between;
     width: 327px;
     height: 58px;
-    left: 24px;
-    top: 770px;
+    top: 100px;
 
-    color: var(--cor-fonte);
+
+    color: var(--cor-segundaria);
 
     border: 1px solid #EE8924;
     border-radius: 12px;
 }
 
 .redefine:hover {
+    color: var(--cor-fonte);
     background-color: var(--cor-segundaria);
     transition: 0.3s ease-in;
 }
@@ -222,6 +225,7 @@ button {
 }
 
 .delete:hover {
+    color: var(--cor-fonte);
     background-color: red;
     transition: 0.3s ease-in;
 }
