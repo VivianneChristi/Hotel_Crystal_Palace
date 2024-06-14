@@ -188,3 +188,103 @@ main h1 {
     text-decoration: none;
     color: var(--cor-principal);
 }
+
+/* For screens smaller than 768px (tablets) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo_nav {
+        margin: 10px 0;
+    }
+
+    .links_container {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .icon_login_nav {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    main h1 {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .trip-details,
+    .contractor-info {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contractor-info form input {
+        width: calc(100% - 20px);
+    }
+
+    .contractor-info form button {
+        width: calc(100% - 30px);
+    }
+
+    .voltar,
+    .continuar {
+        width: 100%;
+        padding: 13px;
+        margin: 10px 0;
+    }
+}
+
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 16px;
+        flex-direction: row;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .links_container {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo_nav {
+        width: 100px;
+        height: 100px;
+    }
+
+    main h1 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    .trip-details,
+    .contractor-info {
+        padding: 5px;
+    }
+
+    .trip-details{
+        width: 85%;
+    }
+
+    .contractor-info  {
+        width: 85%;
+
+    }
+
+    .contractor-info form input {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .contractor-info form button {
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+}
