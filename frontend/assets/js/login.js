@@ -1,3 +1,9 @@
+
+var loadFile = function (event) {
+    var image = document.getElementById("output");
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+
 // Seleciona os elementos de entrada para email e senha
 
 // Seleciona o botão de login pelo ID
@@ -76,5 +82,4 @@ botao.addEventListener('click', function (event) {
         });
     //   console.log(response.json().then(dados => console.log(dados)).catch(erro => console.log(erro)))
 });
-
 
