@@ -74,7 +74,7 @@ botao.addEventListener('click', function (event) {
             }
 
             if (dados.logado === true) {
-                window.location.href = "http://localhost:5500/frontend/views/hoteis";
+                window.location.href = "http://127.0.0.1:5500/frontend/views/hoteis.html";
             }
         })
         .catch((error) => {
