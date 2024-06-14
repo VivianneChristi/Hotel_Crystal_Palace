@@ -1,0 +1,232 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    
+}
+
+/*-------------------------------Variaveis Css ------------------------*/
+:root {
+    --cor-principal: rgba(44, 44, 44);
+    --cor-navbar: rgba(44, 44, 44, 0.25);
+    --cor-segundaria: #2f4f4e;
+    --cor-de-destaque: #d9a530;
+    --cor-fonte: #f9ebd7;
+}
+
+body {
+    background: url(../img/Plano_de_Fundo.png);
+    background-color: black;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*------------------------------------------NavBar--------------------------------*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 100%;
+    background-color: var(--cor-navbar);
+    color: var(--cor-fonte);
+}
+
+.logo_nav {
+    width: 142px;
+    height: 82px;
+    margin-left: 102px;
+    margin-top: 1px;
+}
+
+.links_container {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    gap: 25px;
+    margin-right: 33px;
+}
+
+.links_nav {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.links_nav:hover {
+    text-decoration: underline;
+}
+
+.icon_login_nav {
+    width: 55px;
+    height: 55px;
+    margin-right: 33.5px;
+    border-radius: 50%;
+}
+
+/*------------------------------------------- Imagem de Perfil ------------------------------*/
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 18px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 206px;
+    height: 206px;
+
+
+    color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-pic input {
+    display: none;
+}
+
+.profile-pic img {
+    position: absolute;
+    object-fit: cover;
+    width: 190px;
+    height: 190px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    border-radius: 100px;
+    z-index: 0;
+}
+
+.profile-pic .-label {
+    cursor: pointer;
+    height: 190px;
+    width: 190px;
+
+}
+
+.profile-pic:hover .-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    color: rgb(250, 250, 250);
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 120px;
+    margin-bottom: 0;
+}
+
+/*----------------------------------------- Perfil --------------------------------*/
+
+.info_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: var(--cor-fonte);
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: var(--cor-fonte);
+
+    padding: 0px;
+    gap: 8px;
+
+    width: 400px;
+    height: 79px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+
+}
+
+.token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    color: var(--cor-fonte);
+   
+
+    height: 30px;
+    text-decoration: underline;
+}
+
+label {
+    color: #D9A530;
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.input {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    background: #2C2C2C;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #D9A530;
+    border: 1px solid #D9A530;
+}
+
+/*-------------------------------------------- Botões -------------------------------*/
+.options {
+    text-align:center; 
+}
+
+button {
+    position: relative;
+    display:inline-block;
+    justify-content: space-between;
+    width: 327px;
+    height: 58px;
+    top: 100px;
+
+
+    color: var(--cor-segundaria);
+
+    border: 1px solid #EE8924;
+    border-radius: 12px;
+}
+
+.redefine:hover {
+    color: var(--cor-fonte);
+    background-color: var(--cor-segundaria);
+    transition: 0.3s ease-in;
+}
+
+.edit:hover {
+    background-color: var(--cor-de-destaque);
+    transition: 0.3s ease-in;
+}
+
+.delete:hover {
+    color: var(--cor-fonte);
+    background-color: red;
+    transition: 0.3s ease-in;
+}
+

@@ -1,3 +1,4 @@
+/*------------------------------- Reset ------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -6,31 +7,29 @@
     box-sizing: border-box;
 }
 
-/*-------------------------------Variaveis Css ------------------------*/
+/*------------------------------- Variáveis CSS ------------------------*/
 :root {
-    --cor-principal: rgba(44, 44, 44);
+    --cor-principal: rgba(44, 44, 44, 1);
     --cor-navbar: rgba(44, 44, 44, 0.25);
     --cor-segundaria: #2f4f4e;
     --cor-de-destaque: #d9a530;
     --cor-fonte: #f9ebd7;
 }
 
-/*-------------------------------Inicio style Main ------------------------*/
-
+/*------------------------------- Estilos Gerais ------------------------*/
 body {
     background-color: var(--cor-segundaria);
 }
 
-/*-------------------------------Inicio style Navbar ------------------------*/
+/*------------------------------- Navbar ------------------------*/
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    width: 100%;
     background-color: var(--cor-navbar);
     color: var(--cor-fonte);
-    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .logo_nav {
@@ -41,13 +40,12 @@ body {
 .links_container {
     display: flex;
     align-items: center;
-    font-weight: 100;
     gap: 25px;
+    font-weight: 100;
 }
 
 .links_nav {
     color: var(--cor-fonte);
-    text-decoration: none;
     font-size: 20px;
 }
 
@@ -61,7 +59,7 @@ body {
     border-radius: 50%;
 }
 
-/*-------------------------------Inicio style Conteudo Principal ------------------------*/
+/*------------------------------- Conteúdo Principal ------------------------*/
 .container_pai {
     width: 100%;
     height: 100vh;
@@ -73,8 +71,8 @@ body {
 #conteudo_Principal {
     color: var(--cor-fonte);
     background-color: rgba(30, 30, 30, 0.43);
-    margin-top: 374px;
-    height: 200px;
+    height: 50vh;
+    margin-top: 50px;
     padding: 20px;
 }
 
@@ -85,11 +83,11 @@ body {
 
 #localizacao {
     background-color: rgba(47, 79, 78, 0.61);
-    width: fit-content;
     padding: 10px 20px;
     border-radius: 50px;
     border: 1px solid #598B8A;
     margin-top: 10px;
+    width: fit-content;
 }
 
 #cep {
@@ -98,9 +96,9 @@ body {
 
 .descricao {
     font-size: 20px;
+    margin: 70px 20px;
     text-align: left;
     color: var(--cor-fonte);
-    margin: 70px 20px;
 }
 
 #subnavbar {
@@ -109,7 +107,6 @@ body {
 }
 
 #subnavbar a {
-    text-decoration: none;
     color: var(--cor-fonte);
     margin: 0 25.5px;
     display: inline-block;
@@ -121,7 +118,6 @@ body {
     color: var(--cor-segundaria);
     padding: 10px;
     border-radius: 15px;
-    transition: all 0.5s;
 }
 
 .iframe-container {
@@ -141,11 +137,9 @@ body {
     background-color: var(--cor-de-destaque);
     padding: 20px;
     color: var(--cor-fonte);
-    font-family: Arial, sans-serif;
-    width: 100%;
     max-width: 1200px;
-    border-radius: 65px;
     margin: 20px auto;
+    border-radius: 65px;
 }
 
 .tema {
@@ -172,8 +166,8 @@ h4 {
 }
 
 .topicos {
-    text-align: left;
     margin-top: 50px;
+    text-align: left;
 }
 
 .icon-destinos {
@@ -182,7 +176,8 @@ h4 {
     margin-right: 10px;
 }
 
-.km, .minutos {
+.km,
+.minutos {
     margin: 0;
 }
 
@@ -213,12 +208,12 @@ hr {
     border-radius: 10px;
 }
 
-.container, .container-servicos {
+.container,
+.container-servicos {
     background-color: #F5E9D7;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
     max-width: 1103px;
     margin: 20px auto;
 }
@@ -257,7 +252,6 @@ hr {
 
 .categoria ul {
     list-style: none;
-    padding: 0;
 }
 
 .categoria ul li {
@@ -308,10 +302,6 @@ hr {
     color: var(--cor-fonte);
 }
 
-.gastronomia h1 {
-    margin-right: 10px;
-}
-
 .gastronomia h2 {
     font-size: 1.5em;
     color: var(--cor-de-destaque);
@@ -359,7 +349,7 @@ hr {
 
 .card-title {
     font-family: 'Nunito', sans-serif;
-    font-size: 45px;
+    font-size: 35px;
     text-align: center;
     color: var(--cor-fonte);
     margin-bottom: 10px;
@@ -377,6 +367,7 @@ hr {
     background-color: rgba(249, 235, 215, 0.3);
     padding: 5px;
     border-radius: 20px;
+    font-size: 15px;
 }
 
 .card-details img {
@@ -415,34 +406,21 @@ hr {
 .acomodacao {
     font-size: 45px;
     color: var(--cor-segundaria);
+    text-align: center;
 }
 
 /* --------------------------------------- Footer ----------------------------------------- */
 .logo {
-    position: relative;
     display: flex;
     width: 30%;
     top: 180px;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-    border-color: #D9A530;
-}
-
 .rodape {
-    position: relative;
     width: 100%;
-    height: auto;
     top: 100px;
     color: #F9EBD7;
     font-family: 'Montserrat';
-
 }
 
 .footer-container {
@@ -480,14 +458,12 @@ hr {
 .locations {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .location {
     width: 50%;
     margin-bottom: 20px;
 }
-
 
 .location .city {
     font-weight: bold;
@@ -498,7 +474,6 @@ hr {
     margin: 5px 0;
     color: #F9EBD7;
 }
-
 
 .social-icons {
     margin-bottom: 30px;
@@ -524,18 +499,27 @@ hr {
     font-weight: bold;
 }
 
-/* --------------------------------------- Responsive ----------------------------------------- */
+.footer-container {
+    margin-top: 100px;
+}
 
-/* Responsividade Tablet */
-@media (max-width: 768px) {
+/* --------------------------------------- Responsividade ----------------------------------------- */
+
+/* Tablet */
+@media (min-width: 744px) and (max-width: 1440px) {
     .navbar {
-        flex-direction: column;
+        font-size: 16px;
+        flex-direction: row;
         align-items: flex-start;
     }
 
     .links_container {
-        flex-direction: column;
         gap: 10px;
+    }
+
+    .logo_nav {
+        width: 100px;
+        height: 100px;
     }
 
     .text1 {
@@ -554,8 +538,29 @@ hr {
         flex-direction: column;
         align-items: center;
     }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-details div {
+        font-size: 8px;
+    }
+
+    .imagem-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    }
+
+    .destinos {
+        width: 95%;
+    }
+
+    .gastronomia img {
+        width: 400px;
+    }
 }
 
+/* Dispositivos Móveis */
 @media (max-width: 480px) {
     .text1 {
         margin-top: 60px;
@@ -595,17 +600,15 @@ hr {
     }
 }
 
-/* --------------------------------------- Responsive ----------------------------------------- */
-
-/* Responsividade para Tablets */
+/* Dispositivos Móveis */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
+        padding: 10px 20px;
     }
 
     .links_container {
-        flex-direction: column;
         gap: 10px;
     }
 
@@ -629,6 +632,10 @@ hr {
         flex-direction: column;
     }
 
+    .gastronomia img {
+        width: 400px;
+    }
+
     .cards {
         justify-content: center;
     }
@@ -646,15 +653,24 @@ hr {
     }
 }
 
-/* Responsividade para Dispositivos Móveis */
+/* Dispositivos Móveis */
 @media (max-width: 480px) {
     .logo_nav {
-        width: 100px;
-        height: 60px;
+        display: flex;
     }
 
+    body {
+        width: 100%;
+    }
+
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+    }
     .links_nav {
         font-size: 16px;
+        display: flex;
     }
 
     #nomeDoHotel {
@@ -707,12 +723,9 @@ hr {
         font-size: 0.9em;
     }
 
-    .container-servicos, .container {
+    .container-servicos,
+    .container {
         padding: 20px;
-    }
-
-    .container-servicos {
-        height: auto;
     }
 
     .servicos h1 {
@@ -740,11 +753,28 @@ hr {
     .social-media-button,
     .shortcuts-button {
         width: 100%;
-        margin-bottom: 10px;
     }
 
     .social-icons img {
         width: 20px;
         height: 20px;
+    }
+
+    #subnavbar {
+        font-size: 10px;
+        padding: 0;
+        gap: 0;
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .iframe-container {
+        margin-bottom: 50px;
+    }
+
+    .destino {
+        display: flex;
+        flex-direction: row;
     }
 }

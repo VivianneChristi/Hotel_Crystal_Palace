@@ -1,50 +1,51 @@
+/*------------------------------- Reset ------------------------*/
 * {
-    margin: 0 auto;
-    padding: 0
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-
-body {
-    background-color: var(--cor-segundaria);
-}
-
+/*------------------------------- Variáveis CSS ------------------------*/
 :root {
-    --cor-principal: rgba(44, 44, 44);
+    --cor-principal: rgba(44, 44, 44, 1);
     --cor-navbar: rgba(44, 44, 44, 0.25);
     --cor-segundaria: #2f4f4e;
     --cor-de-destaque: #d9a530;
     --cor-fonte: #f9ebd7;
 }
 
-/*------------------------------------------NavBar--------------------------------*/
+/*------------------------------- Estilos Gerais ------------------------*/
+body {
+    background-color: var(--cor-segundaria);
+}
+
+/*------------------------------- Navbar ------------------------*/
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    max-width: 100%;
     background-color: var(--cor-navbar);
     color: var(--cor-fonte);
+    max-width: 100%;
 }
 
 .logo_nav {
     width: 142px;
     height: 82px;
-    margin-left: 102px;
-    margin-top: 1px;
 }
 
 .links_container {
     display: flex;
     align-items: center;
-    font-weight: 100;
     gap: 25px;
-    margin-right: 33px;
+    font-weight: 100;
 }
 
 .links_nav {
     color: var(--cor-fonte);
-    text-decoration: none;
     font-size: 20px;
 }
 
@@ -55,21 +56,21 @@ body {
 .icon_login_nav {
     width: 55px;
     height: 55px;
-    margin-right: 33.5px;
     border-radius: 50%;
 }
 
 /*------------------------------------------Text--------------------------------*/
 .information {
     position: relative;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    padding: 20px;
 }
 
 .text1 {
     position: relative;
     width: 480px;
-    height: 28px;
-    left: -130px;
-    top: 120px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -81,36 +82,34 @@ body {
 .hotel {
     position: relative;
     width: 782px;
-    height: 191px;
-    top: 80px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 200px;
     line-height: 244px;
-
     color: #F9EBD7;
 }
 
 .sub-text {
     position: relative;
     width: 758px;
-    height: 101px;
-    top: 100px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 23px;
     line-height: 28px;
     color: #F9EBD7;
+    text-align: left;
 }
 
 /* ---------------------------------------Card Styles ----------------------------------------- */
 
 .card-container {
     position: relative;
-    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--cor-segundaria);
@@ -144,12 +143,12 @@ body {
 
 .card-content h3 {
     margin: 10px 0;
-    color: #F9EBD7
+    color: #F9EBD7;
 }
 
 .card-content p {
     margin: 10px 0;
-    color: #F9EBD7
+    color: #F9EBD7;
 }
 
 .card-content button {
@@ -168,24 +167,19 @@ body {
 }
 
 .rectangle {
-    /* Rectangle 1 */
     position: absolute;
     width: 280px;
     height: 30px;
-
     color: #F9EBD7;
     background-color: #2F4F4E;
     border-radius: 15px;
-
 }
 
 .info {
     display: flex;
     gap: 20px;
-    /* Ajustado para mais espaçamento entre os itens */
     color: #F9EBD7;
     margin-bottom: 10px;
-
 }
 
 /* --------------------------------------- Footer ----------------------------------------- */
@@ -213,7 +207,6 @@ hr {
     top: 300px;
     color: #F9EBD7;
     font-family: 'Montserrat';
-
 }
 
 .footer-container {
@@ -251,14 +244,12 @@ hr {
 .locations {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .location {
     width: 50%;
     margin-bottom: 20px;
 }
-
 
 .location .city {
     font-weight: bold;
@@ -269,7 +260,6 @@ hr {
     margin: 5px 0;
     color: #F9EBD7;
 }
-
 
 .social-icons {
     margin-bottom: 30px;
@@ -298,70 +288,166 @@ hr {
 /* --------------------------------------- Responsive ----------------------------------------- */
 
 /* Responsividade Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .navbar {
-        flex-direction: column;
+        font-size: 16px;
+        flex-direction: row;
         align-items: flex-start;
     }
 
     .links_container {
-        flex-direction: column;
         gap: 10px;
     }
 
+    .logo_nav {
+        width: 100px;
+        height: 100px;
+    }
+
+    .information {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
+        padding: 20px;
+    }
+    
     .text1 {
-        font-size: 16px;
+        position: relative;
+        width: 480px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: #D9A530;
     }
-
+    
     .hotel {
-        font-size: 100px;
+        position: relative;
+        width: 782px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 200px;
+        line-height: 244px;
+        color: #F9EBD7;
     }
-
+    
     .sub-text {
-        font-size: 18px;
+        position: relative;
+        width: 758px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28px;
+        color: #F9EBD7;
+        text-align: left;
     }
 
     .card-container {
-        flex-direction: column;
-        align-items: center;
+        top: 80px;
     }
 }
 
+/* Responsividade Mobile */
 @media (max-width: 480px) {
-    .text1 {
-        margin-top: 60px;
-        font-size: 14px;
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
 
-    .hotel {
-        font-size: 80px;
+    .navbar {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
+    .links_container {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo_nav {
+        width: 100px;
+        height: 100px;
+    }
+
+    .information {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%; /* Adjusted for responsiveness */
+        padding: 20px;
+    }
+    
+    .text1,
+    .hotel,
     .sub-text {
-        font-size: 16px;
+        position: relative;
+        width: 100%; /* Adjusted for responsiveness */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        color: #F9EBD7; /* Adjusted for readability on mobile */
     }
-
-    .card {
-        width: 90%;
+    
+    .text1 {
+        font-size: 16px; /* Adjusted font size for mobile */
+        line-height: 24px; /* Adjusted line height for mobile */
+        color: var(--cor-de-destaque);
     }
-
-    .card-content {
-        padding: 10px;
+    
+    .hotel {
+        font-size: 85px; /* Adjusted font size for mobile */
+        line-height: 100px; /* Adjusted line height for mobile */
+    
     }
-
-    .card-content h2 {
-        font-size: 18px;
+    
+    .sub-text {
+        font-size: 14px; /* Adjusted font size for mobile */
+        line-height: 24px; /* Adjusted line height for mobile */
+        text-align: left; /* Center align for mobile */
     }
+    
+    @media only screen and (max-width: 768px) {
 
-    .card-content h3 {
-        font-size: 16px;
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .navbar {
+            font-size: 12px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    
+        .links_container {
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+    
+        .logo_nav {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .text1,
+        .hotel,
+        .sub-text {
+            width: 100%; /* Adjusted width for smaller screens */
+        }
     }
-
-    .card-content p {
-        font-size: 14px;
-    }
-
-    .card-content button {
-        font-size: 14px;
+        
+    .card-container {
+        top: 3  0px;
     }
 }

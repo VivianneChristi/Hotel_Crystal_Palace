@@ -135,3 +135,39 @@ hr {
     margin-top: 35px;
     margin-bottom: 35px;
 }
+
+/* Adicione essas regras no final do seu arquivo CSS */
+
+/* Para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 10px; /* Reduz o padding para os links na barra de navegação */
+    }
+
+    .logo_nav {
+        width: 100px; /* Reduz o tamanho do logo na barra de navegação */
+        margin-left: 20px; /* Reduz o espaçamento do logo na barra de navegação */
+    }
+
+    .links_container {
+        gap: 15px; /* Reduz o espaçamento entre os links na barra de navegação */
+        margin-right: 10px; /* Reduz o espaçamento do lado direito na barra de navegação */
+    }
+
+    .icon_login_nav {
+        width: 40px; /* Reduz o tamanho do ícone de login na barra de navegação */
+        margin-right: 10px; /* Reduz o espaçamento do lado direito do ícone de login */
+    }
+
+    .confirmation h1 {
+        font-size: 28px; /* Reduz o tamanho do título na seção de confirmação */
+    }
+
+    .information h2 {
+        font-size: 16px; /* Reduz o tamanho do título na seção de informações */
+    }
+
+    .phone-number {
+        font-size: 20px; /* Reduz o tamanho do número de telefone na seção de ajuda */
+    }
+}

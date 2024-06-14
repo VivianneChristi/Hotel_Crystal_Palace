@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+
+    <title>Seu Perfil</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo_nav">
+            <a href="index.html"><img src="../assets/img/Logo_Nav.png" alt=""></a>
+        </div>
+        <div class="links_container">
+            <a href="hoteis.html" class="links_nav">Hotéis</a>
+            <a href="destinos.html" class="links_nav">Destinos</a>
+            <a href="contato.html" class="links_nav">Contato/Sac</a>
+        </div>
+        
+
+    </nav>
+        <div class="profile-pic">
+            <label class="-label" for="file"></label>
+            <input id="file" type="file" onchange="loadFile(event)"/>
+            <img src="../assets/img/icon/Icon_Login 1.png" id="output" width="200" />
+        </div>
+
+        <h3 class="info_name">Name</h3>
+        <h1 class="name">Jorge J.J Jangerson</h1>
+                <input class="input" type="email" name="email" placeholder="Email" required="">
+                <input class="input" type="password" name="password" placeholder="Password" required="">
+    
+                <div class="options">
+                    <button class="redefine">Redefinir Senha</button>
+                    <button class="edit">Editar Perfil</button>
+                    <button class="delete">Deletar Perfil</button>
+                </div>
+      
+    <script src="../assets/js/profile.js"></script>
+</body>
+</html>
