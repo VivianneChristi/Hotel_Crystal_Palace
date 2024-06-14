@@ -13,6 +13,10 @@ app.use(express.static('public'));
 
 const router = require('./backend/src/routes/router');
 
+// Rota para renderizar a página inicial
+app.get('/', (req, res) => {
+    res.render('index'); // Renderiza 'index.ejs' na pasta 'views'
+});
 
 // Configurar EJS como a engine de visualização
 app.set('view engine', 'ejs');
@@ -35,6 +39,7 @@ app.get('/detalhes', (req, res) => {
 
 app.get('/hoteis', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend/views/hoteis.html'));
+
 });
 
 app.get('/confirmacao', (req, res) => {
@@ -49,6 +54,17 @@ app.get('/reserva', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend/views/reserva.html'));
 });
 
+app.get('/confirmacao', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/views/confirmacao.html'));
+});
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/views/login.html'));
+});
+
+app.get('/reserva', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/views/reserva.html'));
+});
 
 
 

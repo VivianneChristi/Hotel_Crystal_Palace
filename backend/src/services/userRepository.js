@@ -125,7 +125,6 @@ class usersRepository {
         return true;
     }
 
-
     static async validarNome(nome) {
 
         var isInvalid = '';
@@ -403,6 +402,7 @@ class usersRepository {
         return validEmail;
 
     }
+
 
 }
 
