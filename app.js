@@ -13,11 +13,6 @@ app.use(express.static('public'));
 
 const router = require('./backend/src/routes/router');
 
-// Rota para renderizar a página inicial
-app.get('/', (req, res) => {
-    res.render('index'); // Renderiza 'index.ejs' na pasta 'views'
-});
-
 // Configurar EJS como a engine de visualização
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'frontend/views'));
