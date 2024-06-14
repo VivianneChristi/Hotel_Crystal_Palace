@@ -40,24 +40,24 @@
         <section class="contractor-info">
             <h2>Informações do contratante</h2>
             <form action="#">
-                <input  required ="text" id="name" name="name" placeholder="Nome do contratante">
-                <input required type="text" id="birthdate" name="birthdate" class="phone-input" placeholder="Número de telefone"
-                    pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" title="Formato: xx-xxxxx-xxxx">
-                <input required type="text" id="cpf" name="cpf" placeholder="CPF">
-
+                <input type="text" id="name" name="name" placeholder="Nome do contratante" required>
+                <input type="text" id="birthdate" name="birthdate" class="phone-input" placeholder="Número de telefone"
+                        required>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+        
                 <p class="notice">* Menores de idade devem estar acompanhados por pelo menos um responsável legal
                     durante toda a estadia.</p>
                 <p class="notice">* Os demais hóspedes, além do contratante do quarto, <br> devem se cadastrar na entrada do
                     hotel, apresentando um <br> documento de identidade oficial com foto.</p>
-
-                <p class="notice">* Pagementos devem ser realizados no cheking</p>
-
+                <p class="notice">* Pagamentos devem ser realizados no check-in</p>
+        
                 <a href="confirmacao.html" class="confirmar">Confirmar Reserva</a>
             </form>
         </section>
+        
     </main>
 
+</body> <!--pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" title="Formato: xx-xxxxx-xxxx" -->
     <script src="../assets/js/reserva.js"></script>
 </body>
-
 </html>
