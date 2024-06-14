@@ -113,7 +113,11 @@ exports.login = async (req, res) => {
         const loginIsValid = await usersRepository.loginVerificar(req.body);
 
         if (loginIsValid === true) {
-            res.status(201).json({ msg: 'Logado!' })
+            res.status(201).json({ msg: 'Logado!', logado: true });
+
+            /* if (dados.logado) {
+                window.location.href = "/dsadsasda"
+            } */
         } else {
             res.status(500).json({ error: `${loginIsValid}` });
         }
