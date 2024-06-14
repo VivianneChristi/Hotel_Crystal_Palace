@@ -59,6 +59,10 @@ body {
     border-radius: 50%;
 }
 
+.responsive {
+    display: none;
+}
+
 /*------------------------------------------Text--------------------------------*/
 .information {
     position: relative;
@@ -71,7 +75,6 @@ body {
 .text1 {
     position: relative;
     width: 480px;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -82,7 +85,6 @@ body {
 .hotel {
     position: relative;
     width: 782px;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 200px;
@@ -93,7 +95,6 @@ body {
 .sub-text {
     position: relative;
     width: 758px;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 23px;
@@ -113,7 +114,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--cor-segundaria);
-    font-family: 'Montserrat';
 }
 
 .card {
@@ -206,7 +206,6 @@ hr {
     height: auto;
     top: 300px;
     color: #F9EBD7;
-    font-family: 'Montserrat';
 }
 
 .footer-container {
@@ -226,7 +225,7 @@ hr {
 .social-media-button,
 .shortcuts-button {
     background-color: #D9A530;
-    color: #2F4F4E;
+    color: var(--cor-fonte);
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
@@ -311,33 +310,33 @@ hr {
         width: fit-content;
         padding: 20px;
     }
-    
+
     .text1 {
         position: relative;
         width: 480px;
-        font-family: 'Montserrat';
+
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
         line-height: 28px;
         color: #D9A530;
     }
-    
+
     .hotel {
         position: relative;
         width: 782px;
-        font-family: 'Montserrat';
+
         font-style: normal;
         font-weight: 700;
         font-size: 200px;
         line-height: 244px;
         color: #F9EBD7;
     }
-    
+
     .sub-text {
         position: relative;
         width: 758px;
-        font-family: 'Montserrat';
+
         font-style: normal;
         font-weight: 700;
         font-size: 23px;
@@ -381,39 +380,163 @@ hr {
         position: relative;
         margin: 0 auto;
         text-align: center;
-        width: 100%; /* Adjusted for responsiveness */
+        width: 100%;
+        /* Adjusted for responsiveness */
         padding: 20px;
     }
-    
+
     .text1,
     .hotel,
     .sub-text {
         position: relative;
-        width: 100%; /* Adjusted for responsiveness */
-        font-family: 'Montserrat';
+        width: 100%;
+        /* Adjusted for responsiveness */
+
         font-style: normal;
         font-weight: 700;
-        color: #F9EBD7; /* Adjusted for readability on mobile */
+        color: #F9EBD7;
+        /* Adjusted for readability on mobile */
     }
-    
+
     .text1 {
-        font-size: 16px; /* Adjusted font size for mobile */
-        line-height: 24px; /* Adjusted line height for mobile */
+        font-size: 16px;
+        /* Adjusted font size for mobile */
+        line-height: 24px;
+        /* Adjusted line height for mobile */
         color: var(--cor-de-destaque);
     }
-    
+
     .hotel {
-        font-size: 85px; /* Adjusted font size for mobile */
-        line-height: 100px; /* Adjusted line height for mobile */
-    
+        font-size: 85px;
+        /* Adjusted font size for mobile */
+        line-height: 100px;
+        /* Adjusted line height for mobile */
+
     }
-    
+
     .sub-text {
-        font-size: 14px; /* Adjusted font size for mobile */
-        line-height: 24px; /* Adjusted line height for mobile */
-        text-align: left; /* Center align for mobile */
+        font-size: 14px;
+        /* Adjusted font size for mobile */
+        line-height: 24px;
+        /* Adjusted line height for mobile */
+        text-align: left;
+        /* Center align for mobile */
     }
-    
+
+    .card-container {
+        display: flex;
+        width: 347px;
+        margin: 0 auto;
+
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card-image img {
+        width: 100%;
+    }
+
+    .rectangle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rectangle img {
+        margin-right: 10px;
+    }
+
+    hr{
+        width: 100%;
+    }
+    .rodape {
+        width: 430px;
+
+    }
+
+    .logo{
+        align-content: center;
+        width: 419px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        color: var(--cor-fonte);
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .responsive {
+        display: flex;
+        width: 60px;
+    }
+
+    .links_container {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @media only screen and (max-width: 768px) {
 
         body {
@@ -421,33 +544,34 @@ hr {
             margin: 0;
             padding: 0;
         }
-    
+
         .navbar {
             font-size: 12px;
             display: flex;
             flex-direction: row;
             align-items: flex-start;
         }
-    
+
         .links_container {
             gap: 10px;
             display: flex;
             flex-direction: row;
         }
-    
+
         .logo_nav {
             width: 100px;
             height: 100px;
         }
-        
+
         .text1,
         .hotel,
         .sub-text {
-            width: 100%; /* Adjusted width for smaller screens */
+            width: 100%;
+            /* Adjusted width for smaller screens */
         }
     }
-        
+
     .card-container {
-        top: 3  0px;
+        top: 3 0px;
     }
 }
