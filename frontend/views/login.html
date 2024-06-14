@@ -32,14 +32,21 @@
     <div class="register">
       <form class="form">
         <label for="chk" aria-hidden="true">Register</label>
+          <div class="profile-pic">
+            <label class="-label" for="file"></label>
+            <input id="file" type="file" onchange="loadFile(event)"/>
+            <img src="../assets/img/icon/—Pngtree—avatar icon profile icon member_5247852.png" id="output" width="200" />
+          </div>
+        
+
         <input class="input" type="name" name="name" placeholder="Name" required="">
         <input class="input" type="email" name="email" placeholder="Email" required="">
         <input class="input" type="password" name="pswd" placeholder="Password" required="">
 
-        <button>Register</button>
+        <button class="register-button">Register</button>
       </form>
     </div>
   </div>
 </body>
-
+<script src="../assets/js/profile.js"></script>
 </html>
