@@ -14,4 +14,7 @@ router.delete('/users/:id', usersController.deleteUser);
 // Rota para nova senha
 router.put('/users/newPassword/:id/:token', usersController.newPasswordUser);
 
+// Rota para efetuar login
+router.post('/users/login', usersController.login) 
+
 module.exports = router;

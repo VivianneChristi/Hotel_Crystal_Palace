@@ -1,8 +1,13 @@
 const express = require('express');
 const path = require('path');
 
-const port = 8080;
+const port = 5000;
 const app = express();
+
+app.use(express.json());
+
+const cors = require("cors");
+app.use(cors());
 
 app.use(express.static('public'));
 
@@ -29,6 +34,7 @@ app.get('/detalhes', (req, res) => {
 
 app.get('/hoteis', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend/views/hoteis.html'));
+
 });
 
 app.get('/confirmacao', (req, res) => {
@@ -43,6 +49,17 @@ app.get('/reserva', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend/views/reserva.html'));
 });
 
+app.get('/confirmacao', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/views/confirmacao.html'));
+});
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/views/login.html'));
+});
+
+app.get('/reserva', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/views/reserva.html'));
+});
 
 
 
