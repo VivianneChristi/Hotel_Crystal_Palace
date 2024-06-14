@@ -10,7 +10,7 @@ body {
 
 :root {
     --cor-principal: rgba(44, 44, 44);
-    --cor-navbar: rgba(44,44,44, 0.25);
+    --cor-navbar: rgba(44, 44, 44, 0.25);
     --cor-segundaria: #2f4f4e;
     --cor-de-destaque: #d9a530;
     --cor-fonte: #f9ebd7;
@@ -37,8 +37,8 @@ body {
 .links_container {
     display: flex;
     align-items: center;
-    font-weight:100;
-    gap: 25px; 
+    font-weight: 100;
+    gap: 25px;
     margin-right: 33px;
 }
 
@@ -49,19 +49,19 @@ body {
 }
 
 .links_nav:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .icon_login_nav {
     width: 55px;
     height: 55px;
-    margin-right: 33.5px; 
+    margin-right: 33.5px;
     border-radius: 50%;
 }
 
 /*------------------------------------------Text--------------------------------*/
 .information {
-     position: relative;
+    position: relative;
 }
 
 .text1 {
@@ -190,10 +190,10 @@ body {
 
 /* --------------------------------------- Footer ----------------------------------------- */
 .logo {
-   position: relative;
-   display: flex;
-   width: 30%;
-   top: 180px;
+    position: relative;
+    display: flex;
+    width: 30%;
+    top: 180px;
 }
 
 hr {
@@ -219,14 +219,19 @@ hr {
 .footer-container {
     justify-content: flex-start;
     background-color: var(--cor-segundaria);
-    padding: 20px;  
+    padding: 20px;
 }
 
-.support, .social-media, .shortcuts, .locations {
+.support,
+.social-media,
+.shortcuts,
+.locations {
     margin-bottom: 20px;
 }
 
-.support-button, .social-media-button, .shortcuts-button {
+.support-button,
+.social-media-button,
+.shortcuts-button {
     background-color: #D9A530;
     color: #2F4F4E;
     border: none;
@@ -237,7 +242,8 @@ hr {
     margin-bottom: 10px;
 }
 
-.support p, .phone-number {
+.support p,
+.phone-number {
     margin: 5px 0;
     font-size: 16px;
 }
@@ -245,7 +251,7 @@ hr {
 .locations {
     display: flex;
     flex-wrap: wrap;
-   
+
 }
 
 .location {
@@ -287,4 +293,75 @@ hr {
     color: #F9EBD7;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* --------------------------------------- Responsive ----------------------------------------- */
+
+/* Responsividade Tablet */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links_container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .text1 {
+        font-size: 16px;
+    }
+
+    .hotel {
+        font-size: 100px;
+    }
+
+    .sub-text {
+        font-size: 18px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .text1 {
+        margin-top: 60px;
+        font-size: 14px;
+    }
+
+    .hotel {
+        font-size: 80px;
+    }
+
+    .sub-text {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 18px;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .card-content button {
+        font-size: 14px;
+    }
 }

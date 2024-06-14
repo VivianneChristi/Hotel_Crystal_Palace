@@ -1,13 +1,9 @@
 // Seleciona os elementos de entrada para email e senha
 
-
-
 // Seleciona o botão de login pelo ID
 const botao = document.getElementById('login');
 
 const butao = document.getElementById('register');
-
-
 
 
 // Array para armazenar os dados
@@ -15,6 +11,8 @@ const data = [];
 
 
 butao.addEventListener('click', function (event) {
+
+    console.log("dsasdasda")
 
     event.preventDefault();
 
@@ -49,11 +47,24 @@ botao.addEventListener('click', function (event) {
         senha: senha.value
     };
 
-    // Adiciona as informações ao array de dados
-    data.push(info);
 
-    // Exibe os dados no console
-    console.log(data);
+    console.log(info)
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let fetchData = {
+        method: 'POST',
+        body: JSON.stringify(info),
+        headers: myHeaders
+    }
+
+
+    fetch('http://localhost:5000/api/users/login', fetchData).then((response) => {
+        console.log(response.json().then(dados => console.log(dados)).catch(erro => console.log(erro)))
+
+    })
+
 });
 
 

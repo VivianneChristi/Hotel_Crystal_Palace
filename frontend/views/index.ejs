@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Adicione isto dentro da tag <head> do seu HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container_pai">
+        <nav class="navbar">
+            <div class="logo_nav">
+                <a href="index"><img src="/img/Logo_Nav.png" alt=""></a>
+            </div>
+            <div class="links_container">
+                <a href="hoteis" class="links_nav">Hotéis</a>
+                <a href="detalhes" class="links_nav">Detalhes</a>
+                <a href="/" class="links_nav">Contato/Sac</a>
+                <a href="login"><img src="/img/icon/Icon_Login 1.png" alt="icone_login" class="icon_login_nav"></a>
+            </div>
+        </nav>
+
+        <section id="conteudo_Principal">
+            <h2 class="titulo_conteudo_Principal">
+                Descubra o luxo e o conforto que você <br> merece
+            </h2>
+            <div class="campo_de_busca_conteudo_Principal">
+                <p class="texto_campo_de_busca">
+                    Seu refúgio perfeito, onde cada detalhe importa, apenas a um click de distância
+                </p>
+                <div class="selecao_campo_de_busca">
+                    <img src="/img/icon/icon-destino 1.png" alt="icone_de_afinete_de_localizacao"
+                        class="icone_campo_de_busca">
+                    <select id="destino" class="campo_selecao" required>
+                        <option value="" disabled selected hidden>Selecione seu destino</option>
+                        <option value="rio">Crystal Rio de Janeiro</option>
+                        <option value="bh">Crystal Belo Horizonte</option>
+                        <option value="pe">Crystal Pernambuco</option>
+                    </select>
+                    <img src="/img/icon/icon-divisão.png" alt="" class="icon_divisão">
+                    <img src="/img/icon/icon-calendar 1.png" alt="icone_de_calendario" class="icone_campo_de_busca">
+                    <input type="text" id="dateRange" placeholder="Selecione o período" class="campo_input">
+                    <img src="/img/icon/icon-divisão.png" alt="" class="icon_divisão">
+                    <img src="/img/icon/icon-peoples 1.png" alt="icone_de_pessoas" class="icone_campo_de_busca">
+                    <select id="campo_selecao" class="campo_selecao" required>
+                        <option value="" disabled selected hidden>Quantas pessoas?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5+</option>
+                    </select>
+                    <button id="botao_busca" class="botao_campo_de_busca">
+                        <p class="text_botao">Buscar</p>
+                        <img src="/img/icon/icon-lupa 1.png" alt="" class="icone_botao_campo_de_busca">
+                    </button>
+                </div>
+                <div id="resultado_busca" style="display: none;">
+                    <!-- Aqui será exibida a lista de resultados da busca -->
+                </div>
+            </div>
+
+    </div>
+    </section>
+
+    </div>
+
+
+    <section class="conteudo_informativo">
+        <h2 class="titulo_conteudo_informativo">
+            Experiências, Diversão<br>
+            & Luxo
+        </h2>
+
+        <p class="paragrafro_conteudo_informativo">A rede Crystal representa hospitalidade excepcional, oferecendo
+            hotéis, resorts e experiências de alto padrão, <span class="paragrafro_conteudo_informativo_span">com um
+                compromisso firme com o profissionalismo.</span></p>
+
+        <a href="hoteis.html" class="link_botao">
+            <button class="botão_conteudo_informativo">Conheça os Hotéis</button>
+        </a>'
+
+        <div class="container_amarelo">
+            <h6 class="paragrafo_container_amarelo">Estamos presentes onde você estiver.</h6>
+            <h2 class="titulo_container_amarelo">Conheça os nossos destinos</h2>
+            <p class="paragrafo_legenda_titulo_container_amarelo">Independente do destino, a Crystal oferece as melhores
+                opções de estadia para você aproveitar ao máximo sua experiência.</p>
+
+            <div class="hoteis_conteudo_informativo">
+                <div class="Hotel_Rj">
+                    <img src="/img/Img_Rio_de_Janeiro.png" alt="Rio de Janeiro" class="img_hoteis_Rj">
+
+                    <div class="textos_cards_hoteis">
+                        <h3 class="titulo_card_hotel">Rio de <br>Janeiro</h3>
+                        <p class="quantidade_hotel">Hotéis: 1</p>
+                    </div>
+
+                </div>
+                <div class="Hotel_Bh">
+                    <img src="/img/Img_Belo_Horizonte.png" alt="Belo Horizonte" class="img_hoteis_Bh">
+                    <div class="textos_cards_hoteis">
+                        <h3 class="titulo_card_hotel">Belo <br>Horizonte</h3>
+                        <p class="quantidade_hotel">Hotéis: 1</p>
+                    </div>
+                </div>
+                <div class="Hotel_Pe">
+
+                    <img src="/img/Img_Pernambuco.png" alt="Pernambuco" class="img_hoteis_Pe">
+                    <div class="textos_cards_hoteis_Pe">
+                        <h3 class="titulo_card_hotel_Pe">Pernambuco</h3>
+                        <p class="quantidade_hotel_Pe">Hotéis: 1</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer class="rodape">
+        <img class="logo_rodape" src="/img/logo-rodapé.png" alt="">
+
+        <hr>
+        <div class="left-selction">
+            <div class="support">
+                <div class="support_categoria">
+                    <p class="text_support_categoria">AJUDA OU SUPORTE?</p>
+                </div>
+                <p class="central-reservas">CENTRAL DE RESERVAS (WHATSAPP)</p>
+
+                <p class="phone-number"> <img src="/img/icon/icon-whatsapp 1.png" alt="" class="icon_whats">0800 000 000
+                    2</p>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="locations">
+            <div class="column">
+                <div class="location">
+                    <p class="city">São Paulo</p>
+                    <p class="details">(00) 000 0000</p>
+                    <p class="details">Seg. a Sex. das 7h às 19h</p>
+                    <p class="details">Sábados e Feriados: 7h às 16h</p>
+                </div>
+                <div class="location">
+                    <p class="city">Rio de Janeiro</p>
+                    <p class="details">(21) 000 0000</p>
+                    <p class="details">Seg. a Sex. das 9h às 17h</p>
+                    <p class="details">Sábados e Feriados: 8h às 12h</p>
+                </div>
+                <div class="location">
+                    <p class="city">Belo Horizonte</p>
+                    <p class="details">(00) 000 0000</p>
+                    <p class="details">Seg. a Sex. das 7h às 17h</p>
+                    <p class="details">Sábados e Feriados: 9h às 12h</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="location">
+                    <p class="city">SAC</p>
+                    <p class="details">(00) 000 0000</p>
+                    <p class="details">Seg. a Sex. das 7h às 17h</p>
+                    <p class="details">Sábados e Feriados: 9h às 12h</p>
+                </div>
+                <div class="location">
+                    <p class="city">Porto Alegre</p>
+                    <p class="details">(00) 000 0000</p>
+                    <p class="details">Seg. a Sex. das 8h às 17h</p>
+                    <p class="details">Sábados e Feriados: 9h às 12h</p>
+                </div>
+                <div class="location">
+                    <p class="city">Curitiba</p>
+                    <p class="details">(00) 000 0000</p>
+                    <p class="details">Seg. a Sex. das 8h às 17h</p>
+                    <p class="details">Sábados e Feriados: 9h às 12h</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="location">
+                    <p class="city">Sede Nacional</p>
+                    <p class="details">R. Carlos Sampaio, 339 - Bela Vista</p>
+                    <p class="details">Paulista, São Paulo</p>
+                </div>
+                <div class="location">
+                    <p class="city">Sede Regional 2</p>
+                    <p class="details">Av. Padre Cacique, 1178 - Menino Deus</p>
+                    <p class="details">Porto Alegre, Rio Grande do Sul</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="social-media">
+            <button class="social-media-button">ACOMPANHE NOSSAS REDES SOCIAIS</button>
+            <div class="social-icons">
+                <img src="/img/icon/icon-instagram 1.png" alt="Instagram">
+                <img src="/img/icon/icon-facebook 1.png" alt="Facebook">
+                <img src="/img/icon/icon-linkedin 1.png" alt="LinkedIn">
+                <img src="/img/icon/icon-whatsapp 1.png" alt="Whatsapp">
+                <span class="site">@crystalpalace</span>
+            </div>
+        </div>
+        <div class="shortcuts">
+            <button class="shortcuts-button">ATALHOS</button>
+            <div class="links">
+                <a href="index">INICIO</a>
+                <a href="hoteis">HOTÉIS</a>
+                <a href="detalhes">DETALHES</a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

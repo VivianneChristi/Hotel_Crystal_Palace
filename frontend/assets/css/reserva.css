@@ -1,0 +1,190 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+/*-------------------------------Variaveis Css ------------------------*/
+:root {
+    --cor-principal: rgba(44, 44, 44);
+    --cor-navbar: rgba(44, 44, 44, 0.25);
+    --cor-segundaria: #2f4f4e;
+    --cor-de-destaque: #d9a530;
+    --cor-fonte: #f9ebd7;
+}
+
+/*-------------------------------Inicio style Main ------------------------*/
+
+body {
+    background-color: var(--cor-principal);
+}
+
+/*-------------------------------Inicio style Navbar ------------------------*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 100%;
+    background-color: var(--cor-navbar);
+    color: var(--cor-fonte);
+}
+
+.logo_nav {
+    width: 142px;
+    height: 82px;
+    margin-left: 102px;
+    margin-top: 1px;
+}
+
+.links_container {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    gap: 25px;
+    margin-right: 33px;
+}
+
+.links_nav {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.links_nav:hover {
+    text-decoration: underline;
+}
+
+.icon_login_nav {
+    width: 55px;
+    height: 55px;
+    margin-right: 33.5px;
+    border-radius: 50%;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 58px;
+    margin-bottom: 20px;
+    color: var(--cor-fonte);
+    font-weight: 500;
+    margin-left: 140px;
+}
+
+.trip-details, .contractor-info {
+    background-color: #333333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 1200px;
+}
+
+.trip-details h2, .contractor-info h2 {
+    font-size: 27px;
+    color: var(--cor-fonte);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.trip-details p{
+    margin: 10px 0;
+    color: var(--cor-fonte);
+    font-weight: 300;   
+}
+
+.trip-details .edit {
+    color: var(--cor-fonte);
+    text-decoration: underline;
+    display: inline-block; /* Adicionando display inline-block para o link "Editar" */
+}
+
+.contractor-info form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Adicionando alinhamento à esquerda */
+}
+
+.contractor-info form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #f9ebd7;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    height: 30px;
+}
+
+.contractor-info form input::placeholder{
+    font-size: 15px;
+}
+
+.contractor-info form label,
+.contractor-info form input,
+.contractor-info form p {
+    margin-left: 0; /* Adicionando margem esquerda zero para alinhar à esquerda */
+    width: 500px;
+}
+
+
+.contractor-info form .notice {
+    font-size: 0.8em;
+    color: #cccccc;
+    margin: 5px 0;
+    
+}
+
+.contractor-info form button {
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 1200px;
+    padding: 15px;
+    color: #333333;
+    background-color: #D9D9D9;
+    transition: all .8s;
+
+}
+
+.contractor-info form button:hover {
+    background-color: #b4b4b4;
+    transition: all .8s;
+    color: #1c1c1c;
+
+
+}
+
+
+.voltar {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #cccccc;
+    color: var(--cor-fonte);
+    transition: all .5s;
+
+}
+
+.voltar a {
+    text-decoration: none;
+    color: white;
+    }
+
+.voltar:hover {
+    background-color: red;
+    padding: 13px;
+    border: 0px;
+    transition: all .5s;
+}
+.continuar {
+    text-decoration: none;
+    color: var(--cor-principal);
+}
