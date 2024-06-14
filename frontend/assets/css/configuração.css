@@ -1,0 +1,231 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+  
+  }
+  
+  /*-------------------------------Variaveis Css ------------------------*/
+  :root {
+    --cor-principal: rgba(44, 44, 44);
+    --cor-navbar: rgba(44, 44, 44, 0.25);
+    --cor-segundaria: #2f4f4e;
+    --cor-de-destaque: #d9a530;
+    --cor-fonte: #f9ebd7;
+  }
+  
+  body {
+    position: relative;
+    width: 890px;
+    height: 902px;
+    background: url(../img/Plano_de_Fundo.png);
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .main {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: #2C2C2C;
+    max-height: 670px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 7px 7px 10px 3px #24004628;
+    width: 90%;
+    /* Largura responsiva */
+    max-width: 400px;
+    /* Largura máxima para telas maiores */
+    border-radius: 12px;
+    overflow: hidden;
+  }
+ 
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 38px;
+    padding: 54px;
+  }
+  
+  
+  .email {
+    width: 135px;
+    height: 5px;
+    left: 284px;
+    top: 101px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+  
+    color: #F9EBD7;
+  }
+  
+  select,
+  option {
+    background-color: #2C2C2C;
+    color: #D9A530;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  
+  /*checkbox to switch from sign up to login*/
+  #chk {
+    display: none;
+  }
+  
+  /*--------------------------------------------------- Editar -------------------------------------------*/
+  
+  .register {
+    width: 100%;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(5%);
+    transition: .8s ease-in-out;
+  }
+  
+  .register input {
+    transform: translateY(-45px);
+  }
+  
+  .register label {
+    color: #D9A530;
+    transform: scale(.6);
+  }
+  
+  #chk:checked~.register {
+    transform: translateY(-60%);
+  }
+  
+  #chk:checked~.register label {
+    transform: scale(1);
+    margin: 10% 0 5%;
+  }
+  
+  #chk:checked~.login label {
+    transform: scale(.6);
+    margin: 5% 0 5%;
+  }
+  
+  /*Button*/
+  .form button {
+    width: 85%;
+    height: 40px;
+    margin: 12px auto 10%;
+    color: #fff;
+    background: #D9A530;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s ease-in;
+  }
+  
+  .register-button {
+    transform: translateY(-70px);
+  }
+  
+  .form button:hover {
+    background-color: #F9EBD7;
+    color: #2C2C2C;
+  }
+
+  label {
+    color: #D9A530;
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
+  
+  .input {
+    width: 100%;
+    height: 40px;
+    background: #2C2C2C;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #D9A530;
+    border: 1px solid #D9A530;
+  }
+  
+    /*-------------------------------------------- Foto ------------------------------*/
+
+
+  .profile-pic {
+    color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    transform: translateY(-10px);
+  }
+  
+  
+  .profile-pic input {
+    display: none;
+  }
+  
+  .profile-pic img {
+    position: absolute;
+    object-fit: cover;
+    width: 105px; 
+    height: 105px; 
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35); 
+    border-radius: 100px; 
+    z-index: 0;
+  }
+  
+  .profile-pic .-label {
+    cursor: pointer;
+    height: 105px; 
+    width: 105px; 
+  
+  }
+  
+  .profile-pic:hover .-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    color: rgb(250, 250, 250); 
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 120px; 
+    margin-bottom: 0;
+  }
+  
+  
+  
+  /*-------------------------------------------- Register ------------------------------*/
+  
+  /* Restante do CSS permanece o mesmo */
+  
+  /* Media Queries para responsividade */
+  @media (max-width: 768px) {
+    .main {
+      width: 95%;
+      /* Aumenta a largura em telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form {
+      padding: 30px;
+      /* Reduz o padding em telas muito pequenas */
+    }
+  }

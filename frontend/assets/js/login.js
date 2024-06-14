@@ -1,3 +1,9 @@
+
+var loadFile = function (event) {
+    var image = document.getElementById("output");
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+
 // Seleciona os elementos de entrada para email e senha
 
 // Seleciona o botão de login pelo ID
@@ -12,7 +18,7 @@ const data = [];
 
 butao.addEventListener('click', function (event) {
 
-    console.log("dsasdasda")
+    console.log("dsasdasda");
 
     event.preventDefault();
 
@@ -60,11 +66,20 @@ botao.addEventListener('click', function (event) {
     }
 
 
-    fetch('http://localhost:5000/api/users/login', fetchData).then((response) => {
-        console.log(response.json().then(dados => console.log(dados)).catch(erro => console.log(erro)))
+    fetch('http://localhost:5000/api/users/login', fetchData)
+        .then((response) => response.json())
+        .then((dados) => {
+            if (dados.error) {
+                alert(dados.error);
+            }
 
-    })
-
+            if (dados.logado === true) {
+                window.location.href = "http://localhost:5500/frontend/views/hoteis";
+            }
+        })
+        .catch((error) => {
+            console.error('Erro:', error);
+        });
+    //   console.log(response.json().then(dados => console.log(dados)).catch(erro => console.log(erro)))
 });
-
 
