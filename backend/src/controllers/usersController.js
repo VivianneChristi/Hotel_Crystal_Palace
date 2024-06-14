@@ -106,3 +106,24 @@ exports.newPasswordUser = async (req, res) => {
 }
 
 
+
+exports.login = async (req, res) => {
+    try {
+
+        const loginIsValid = await usersRepository.loginVerificar(req.body);
+
+        if (loginIsValid === true) {
+            res.status(201).json({ msg: 'Logado!' })
+        } else {
+            res.status(500).json({ error: `${loginIsValid}` });
+        }
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: err.toString() });
+    }
+}
+
+
+
+

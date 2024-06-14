@@ -125,7 +125,6 @@ class usersRepository {
         return true;
     }
 
-
     static async validarNome(nome) {
 
         var isInvalid = '';
@@ -286,8 +285,25 @@ class usersRepository {
 
     static async gerarToken() {
 
-        const randomNum = Math.floor(Math.random() * 999999);
-        return randomNum;
+        for (let index = 0; index < 100; index++) {
+
+            const randomNum = Math.floor(Math.random() * 999999);
+
+            const users = await this.getAllUsers();
+
+            const tokenIgual = users.find(p => p.token === randomNum);
+
+            if (tokenIgual === undefined) {
+
+                index = 100;
+
+                console.log('criado token');
+                return randomNum;
+            }
+
+        }
+
+        return '000001';
     };
 
     static async updatePassword(id, token, newPassword) {
@@ -342,8 +358,57 @@ class usersRepository {
         return false;
     }
 
+    static async loginVerificar(user) {
+
+        const userIsValidEmail = user.email;
+
+        const userIsValidSenha = user.senha;
+
+        const validEmail = await this.validarEmail(userIsValidEmail)
+
+        if (validEmail) {
+
+            const validSenha = await this.validarSenha(userIsValidSenha);
+
+            console.log(validSenha);
+
+            if (validSenha) {
+
+                const users = await this.getAllUsers();
+
+                const loginVerificarEmail = users.find(e => e.email === user.email);
+
+                const loginVerificarSenha = users.find(s => s.senha === user.senha);
+
+
+                if (loginVerificarEmail !== undefined && loginVerificarSenha !== undefined) {
+
+                    return true;
+
+                } else {
+
+                    return 'Usuário não encontrado no Sistema';
+
+
+                }
+
+            } else {
+
+                return validSenha
+            }
+
+        }
+
+        return validEmail;
+
+    }
+
 
 }
+
+
+
+
 
 
 
