@@ -27,25 +27,29 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    max-width: 100%;
     background-color: var(--cor-navbar);
     color: var(--cor-fonte);
-    max-width: 100%;
 }
 
 .logo_nav {
     width: 142px;
     height: 82px;
+    margin-left: 102px;
+    margin-top: 1px;
 }
 
 .links_container {
     display: flex;
     align-items: center;
-    gap: 25px;
     font-weight: 100;
+    gap: 25px;
+    margin-right: 33px;
 }
 
 .links_nav {
     color: var(--cor-fonte);
+    text-decoration: none;
     font-size: 20px;
 }
 
@@ -56,23 +60,25 @@ body {
 .icon_login_nav {
     width: 55px;
     height: 55px;
+    margin-right: 33.5px;
     border-radius: 50%;
 }
 
 /*------------------------------- Conteúdo Principal ------------------------*/
 .container_pai {
     width: 100%;
-    height: 100vh;
-    background-image: url(../img/img-arealazer1.png);
+    height: 1000px;
+    background-image: url(../img/Plano_de_Fundo.png);
     background-size: cover;
     background-position: center;
 }
 
+
 #conteudo_Principal {
     color: var(--cor-fonte);
     background-color: rgba(30, 30, 30, 0.43);
-    height: 50vh;
-    margin-top: 50px;
+    height: 20vh;
+    margin-top: 39vh;
     padding: 20px;
 }
 
@@ -777,4 +783,180 @@ hr {
         display: flex;
         flex-direction: row;
     }
+}
+
+@media (max-width: 768px) {
+    .hoteis_conteudo_informativo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Hotel_Rj,
+    .Hotel_Bh,
+    .Hotel_Pe {
+        width: 90%;
+    }
+}
+
+
+
+/*-------------------------------Inicio style footer ------------------------*/
+.logo {
+    position: relative;
+    display: flex;
+    width: 30%;
+    top: 180px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    border-color: #D9A530;
+}
+
+.central-reservas {
+    position: absolute;
+    top: 240px;
+    left: 40px;
+}
+
+.phone-number {
+    position: relative;
+    top: 23px;
+    left: 40px;
+}
+
+.rodape {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 30px;
+    color: #F9EBD7;
+    font-family: 'Montserrat';
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--cor-segundaria);
+    padding: 20px;
+}
+
+.support,
+.social-media,
+.shortcuts,
+.locations {
+    margin-bottom: 20px;
+}
+
+.support-button,
+.social-media-button,
+.shortcuts-button {
+    background-color: #D9A530;
+    color: #2F4F4E;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.support p,
+.phone-number {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.locations {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.locations .column:first-child {
+    margin-left: 30px;
+}
+
+
+.location .city {
+    font-weight: bold;
+    color: var(--cor-de-destaque);
+}
+
+.location .details {
+    margin: 5px 0;
+    color: #F9EBD7;
+}
+
+.social-media-button {
+    color: var(--cor-fonte);
+    width: 450px;
+    position: absolute;
+    top: 630px;
+    left: 50px;
+}
+
+.social-icons {
+    position: absolute;
+    left: 100px;
+    justify-content: space-around;
+    margin-top: 10px;
+    /* Adicionando margem para separar dos botões */
+}
+
+.site {
+    position: absolute;
+    left: 200px;
+    color: var(--cor-de-destaque);
+}
+
+.shortcuts .links {
+    margin-top: 10px;
+    /* Adicionando margem para separar dos botões */
+}
+
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.social-icons span {
+    font-weight: bold;
+}
+
+.shortcuts-button {
+    color: var(--cor-fonte);
+    position: absolute;
+    top: 630px;
+    left: 750px;
+}
+
+.shortcuts .links {
+    position: relative;
+    left: 750px;
+}
+
+.links a {
+    margin-right: 30px;
+}
+
+
+.shortcuts .links a {
+    color: #F9EBD7;
+    text-decoration: none;
+    font-weight: bold;
 }
