@@ -29,16 +29,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/detalhes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/detalhes.html'));
+    res.render('detalhes');
 });
 
 app.get('/hoteis', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/hoteis.html'));
+    res.render('hoteis');
 
 });
 
 app.get('/confirmacao', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/confirmacao.html'));
+    res.render('confirmacao');
 });
 
 app.get('/login', (req, res) => {
@@ -46,11 +46,11 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/reserva', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/reserva.html'));
+    res.render('reserva');
 });
 
 app.get('/confirmacao', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/confirmacao.html'));
+    res.render('confirmacao');
 });
 
 app.get('/login', (req, res) => {
@@ -58,7 +58,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/reserva', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/reserva.html'));
+    res.render('reserva');
 });
 
 

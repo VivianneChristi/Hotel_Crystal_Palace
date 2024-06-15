@@ -5,25 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmação de Hospedagem</title>
-    <link rel="stylesheet" href="../assets/css/confirmacao.css">
+    <link rel="stylesheet" href="/css/confirmacao.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo_nav">
-            <a href="index.html"><img src="../assets/img/Logo_Nav.png" alt=""></a>
 
-        </div>
-        <div class="links_container">
-            <a href="hoteis.html" class="links_nav">Hotéis</a>
-            <a href="destinos.html" class="links_nav">Destinos</a>
-            <a href="contato.html" class="links_nav">Contato/Sac</a>
-            <a href="login.html"><img src="../assets/img/icon/Icon_Login 1.png" alt="icone_login"
-                    class="icon_login_nav"></a>
-        </div>
-    </nav>
+    <%- include('partials/header') %>
+    
     <main>
         <section class="confirmation">
             <h1>CONFIRMAÇÃO DE HOSPEDAGEM</h1>
@@ -56,7 +46,10 @@
         </section>
 
     </main>
-    <script src="../assets/js/confirmação.js"></script>
+
+    <%- include('partials/footer') %>
+
+    <script src="js/confirmação.js"></script>
 </body>
 
 </html>
