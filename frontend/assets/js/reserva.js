@@ -4,8 +4,20 @@ var loadFile = function (event) {
 };
 
 /*---------------------------------- Sistema de Reserva ----------------------------*/
+ // Atualiza as informações com os dados recebidos
+ document.addEventListener('DOMContentLoaded', function() {
+    // Recupera os dados do localStorage
+    const quartoNome = localStorage.getItem('quartoNome');
+    const quartoCamas = localStorage.getItem('quartoCamas');
+    const precoTotal = localStorage.getItem('precoTotal');
 
-// Seleciona os elementos de entrada para email e senha
+    // Exibe os dados na página
+    document.getElementById('quarto-info').innerText = `Quarto: ${quartoNome}`;
+    document.getElementById('camas-info').innerText = `Camas: ${quartoCamas}`;
+    document.getElementById('preco-info').innerText = `Valor Total: R$ ${precoTotal}`;
+
+});
+    // Seleciona os elementos de entrada para email e senha
 
 // Seleciona o botão de login pelo ID
 const confirmar = document.getElementById('confirmar');

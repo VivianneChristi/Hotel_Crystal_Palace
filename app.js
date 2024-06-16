@@ -51,9 +51,12 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend/views/login.html'));
 });
 
-app.get('/reserva', (req, res) => {
-    res.render('reserva');
+// Rota para lidar com o envio do formulário de reserva
+app.post('/reserva', (req, res) => {
+    const { nome, camas, precoTotal } = req.body;
+    res.render('reserva', { quartoNome: nome, quartoCamas: camas, precoTotal });
 });
+
 
 app.get('/confirmacao', (req, res) => {
     res.render('confirmacao');
@@ -64,11 +67,13 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/reserva', (req, res) => {
-    res.render('reserva');
+    const quartoNome = req.query.quartoNome;
+    const quartoCamas = req.query.quartoCamas;
+    const precoTotal = req.query.precoTotal;
+
+    // Renderiza o template EJS com os dados do quarto
+    res.render('reserva', { quartoNome, quartoCamas, precoTotal });
 });
-
-
-
 
 app.listen(port, () => {
     console.log(`Servidor no ar http://localhost:${port}`);
