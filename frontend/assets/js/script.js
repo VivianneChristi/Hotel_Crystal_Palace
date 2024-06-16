@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <p class="titulo_quarto_preco">Valor Total</p>
                                 <p class="quarto_preco">R$ ${precoTotal}</p>
                             </div>
-                            <button class="quarto_button" ">Reservar Quarto</button>
+                            <button class="quarto_button" >Reservar Quarto</button>
                         </div>
                     </div>
                 `;

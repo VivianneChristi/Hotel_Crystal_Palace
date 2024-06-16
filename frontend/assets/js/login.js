@@ -45,8 +45,6 @@ botao_register.addEventListener('click', function (event) {
         .then((response) => response.json())
         .then((dados) => {
 
-            console.log(dados);
-
             if (dados.error) {
                 alert(dados.error);
             }
