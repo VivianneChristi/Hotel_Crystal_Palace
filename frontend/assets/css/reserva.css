@@ -89,6 +89,11 @@ main h1 {
 
 }
 
+.info {
+    color: var(--cor-fonte);
+    font-size: 22px;
+}
+
 .trip-details h2,
 .contractor-info h2 {
     font-size: 27px;

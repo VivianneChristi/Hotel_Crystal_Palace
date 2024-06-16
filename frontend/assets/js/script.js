@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <p class="titulo_quarto_preco">Valor Total</p>
                                 <p class="quarto_preco">R$ ${precoTotal}</p>
                             </div>
-                            <button class="quarto_button" >Reservar Quarto</button>
+                            <button class="quarto_button" ">Reservar Quarto</button>
                         </div>
                     </div>
                 `;
@@ -90,3 +90,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function enviarDados(nome, camas, precoTotal) {
+    // Crie um objeto com os dados do quarto
+    const dadosQuarto = { nome, camas, precoTotal };
+
+    // Armazena os dados do quarto no localStorage
+    localStorage.setItem('quartoNome', nome);
+    localStorage.setItem('quartoCamas', camas);
+    localStorage.setItem('precoTotal', precoTotal);
+
+    // Redireciona para a segunda página
+    window.location.href = '/reserva';
+}

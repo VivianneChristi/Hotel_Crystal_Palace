@@ -51,6 +51,16 @@ app.get('/config', (req, res) => {
 
     res.render('config')
 
+// Rota para lidar com o envio do formulário de reserva
+app.post('/reserva', (req, res) => {
+    const { nome, camas, precoTotal } = req.body;
+    res.render('reserva', { quartoNome: nome, quartoCamas: camas, precoTotal });
+});
+
+
+app.get('/confirmacao', (req, res) => {
+    res.render('confirmacao');
+>>>>>>> d4ef40802c0c4cae64c06f7980c878ded14b57ae
 });
 
 app.get('/login', (req, res) => {
@@ -58,7 +68,12 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/reserva', (req, res) => {
-    res.render('reserva');
+    const quartoNome = req.query.quartoNome;
+    const quartoCamas = req.query.quartoCamas;
+    const precoTotal = req.query.precoTotal;
+
+    // Renderiza o template EJS com os dados do quarto
+    res.render('reserva', { quartoNome, quartoCamas, precoTotal });
 });
 
 
