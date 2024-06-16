@@ -43,6 +43,10 @@ app.get('/hoteis', (req, res) => {
 
 });
 
+app.get('/perfil', (req, res) => {
+    res.render('perfil')
+});
+
 app.get('/confirmacao', (req, res) => {
     res.render('confirmacao');
 });
