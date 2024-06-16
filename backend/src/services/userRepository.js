@@ -1,8 +1,6 @@
-const { log } = require('console');
-const { randomInt } = require('crypto');
+
 const fs = require('fs');
 const path = require('path');
-const { parse } = require('querystring');
 
 const fileName = 'users.json';
 const filePath = path.join(__dirname, "..", "database", fileName);
@@ -309,8 +307,11 @@ class usersRepository {
     static async updatePassword(id, token, newPassword) {
 
         console.log(id)
+        console.log(token)
         console.log(newPassword)
 
+        return false;
+ /*
         const users = await this.getUserById(id);
 
         console.log(users);
@@ -322,6 +323,7 @@ class usersRepository {
         const senhaValida = await this.validarSenha(newPassword)
 
         console.log(senhaValida)
+        */
         /*
                 if (senhaValida) {
                     const index = users.find(p => p.senha === senhaUser);
@@ -336,7 +338,7 @@ class usersRepository {
                 }
         */
 
-        return senhaValida
+        //return senhaValida
     }
 
     static async validarToken(token, user) {
