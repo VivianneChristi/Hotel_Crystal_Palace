@@ -90,6 +90,8 @@ exports.deleteUser = async (req, res) => {
 exports.newPasswordUser = async (req, res) => {
 
     try {
+
+        console.log(req.body);
         const user = await usersRepository.updatePassword(req.params.id, req.params.token, req.body);
 
         console.log(user)

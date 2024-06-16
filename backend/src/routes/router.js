@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const usersController = require('../controllers/usersController');
+const hotelController = require('../controllers/hotelController')
 
 const router = Router();
 
@@ -12,9 +13,15 @@ router.put('/users/:id', usersController.updateUser);
 router.delete('/users/:id', usersController.deleteUser);
 
 // Rota para nova senha
-router.put('/users/newPassword/:id/:token', usersController.newPasswordUser);
+router.post('/users/newPassword/:id/:token', usersController.newPasswordUser);
 
 // Rota para efetuar login
-router.post('/users/login', usersController.login) 
+router.post('/users/login', usersController.login)
+
+// Rota para ver todas as reservas de um User
+// router.get('/hotel/user:id', hotelController.getAllReserves)
+
+// Rota para reservas do hotel
+router.post('/hotel', hotelController.createReserve)
 
 module.exports = router;
