@@ -1,5 +1,4 @@
 const reserveRepository = require('../services/reserveRepository');
-const userRepository = require('../services/userRepository')
 
 exports.createReserve = async (req, res) => {
 

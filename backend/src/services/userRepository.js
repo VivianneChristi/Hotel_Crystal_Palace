@@ -311,19 +311,19 @@ class usersRepository {
         console.log(newPassword)
 
         return false;
- /*
-        const users = await this.getUserById(id);
-
-        console.log(users);
-
-        const tokenUser = await this.validarToken(token, users);
-
-        console.log(tokenUser)
-
-        const senhaValida = await this.validarSenha(newPassword)
-
-        console.log(senhaValida)
-        */
+        /*
+               const users = await this.getUserById(id);
+       
+               console.log(users);
+       
+               const tokenUser = await this.validarToken(token, users);
+       
+               console.log(tokenUser)
+       
+               const senhaValida = await this.validarSenha(newPassword)
+       
+               console.log(senhaValida)
+               */
         /*
                 if (senhaValida) {
                     const index = users.find(p => p.senha === senhaUser);
