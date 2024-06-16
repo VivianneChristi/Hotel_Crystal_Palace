@@ -47,9 +47,11 @@ app.get('/confirmacao', (req, res) => {
     res.render('confirmacao');
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/login.html'));
-});
+app.get('/config', (req, res) => {
+
+    res.render('config')
+
+})
 
 // Rota para lidar com o envio do formulário de reserva
 app.post('/reserva', (req, res) => {
@@ -80,6 +82,7 @@ app.get('/reserva', (req, res) => {
     res.render('reserva', { quartoNome, quartoCamas, precoTotal });
 });
 
-app.listen(port, () => {
+
+app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor no ar http://localhost:${port}`);
 });

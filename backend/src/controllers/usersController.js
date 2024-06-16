@@ -87,7 +87,7 @@ exports.deleteUser = async (req, res) => {
 
 }
 
-exports.newPasswordUser = async (req, res) => {
+/*exports.newPasswordUser = async (req, res) => {
 
     try {
 
@@ -105,7 +105,7 @@ exports.newPasswordUser = async (req, res) => {
         res.status(500).json({ error: err.toString() });
     }
 
-}
+}*/
 
 
 
@@ -116,10 +116,6 @@ exports.login = async (req, res) => {
 
         if (loginIsValid === true) {
             res.status(201).json({ msg: 'Logado!', logado: true });
-
-            /* if (dados.logado) {
-                window.location.href = "/dsadsasda"
-            } */
         } else {
             res.status(500).json({ error: `${loginIsValid}` });
         }

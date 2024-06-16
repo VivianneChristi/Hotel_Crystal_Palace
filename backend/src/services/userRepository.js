@@ -304,13 +304,13 @@ class usersRepository {
         return '000001';
     };
 
-    static async updatePassword(id, token, newPassword) {
+    /*static async updatePassword(id, token, newPassword) {
 
         console.log(id)
         console.log(token)
         console.log(newPassword)
 
-        return false;
+        return false;*/
         /*
                const users = await this.getUserById(id);
        
@@ -339,15 +339,16 @@ class usersRepository {
         */
 
         //return senhaValida
-    }
+    //}
 
-    static async validarToken(token, user) {
+    
+    //static async validarToken(token, user) {
 
         // terminar validação do token => terminar validação da nova senha
         //const contagem = 0;
 
-        console.log(token)
-        console.log(user)
+      //  console.log(token)
+        //console.log(user)
 
         //const validacaoToken = user.find(p => p.token === token);
 
@@ -356,10 +357,9 @@ class usersRepository {
         /*if (validacaoToken !== undefined) {
             return true;
         }*/
-
+/*
         return false;
-    }
-
+    } */
     static async loginVerificar(user) {
 
         const userIsValidEmail = user.email;

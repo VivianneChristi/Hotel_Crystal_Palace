@@ -13,7 +13,7 @@ router.put('/users/:id', usersController.updateUser);
 router.delete('/users/:id', usersController.deleteUser);
 
 // Rota para nova senha
-router.post('/users/newPassword/:id/:token', usersController.newPasswordUser);
+//router.post('/users/newPassword/:id/:token', usersController.newPasswordUser);
 
 // Rota para efetuar login
 router.post('/users/login', usersController.login)
