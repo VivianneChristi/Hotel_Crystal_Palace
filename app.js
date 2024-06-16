@@ -59,10 +59,11 @@ app.post('/reserva', (req, res) => {
     res.render('reserva', { quartoNome: nome, quartoCamas: camas, precoTotal });
 });
 
+app.get('/perfil', (req, res) => {
 
-app.get('/confirmacao', (req, res) => {
-    res.render('confirmacao');
-});
+    res.render('perfil')
+
+})
 
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend/views/login.html'));
@@ -78,6 +79,6 @@ app.get('/reserva', (req, res) => {
 });
 
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor no ar http://localhost:${port}`);
 });
