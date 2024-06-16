@@ -47,16 +47,10 @@ app.get('/confirmacao', (req, res) => {
     res.render('confirmacao');
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/views/login.html'));
-});
+app.get('/config', (req, res) => {
 
-app.get('/reserva', (req, res) => {
-    res.render('reserva');
-});
+    res.render('config')
 
-app.get('/confirmacao', (req, res) => {
-    res.render('confirmacao');
 });
 
 app.get('/login', (req, res) => {
@@ -66,8 +60,6 @@ app.get('/login', (req, res) => {
 app.get('/reserva', (req, res) => {
     res.render('reserva');
 });
-
-
 
 
 app.listen(port, () => {
