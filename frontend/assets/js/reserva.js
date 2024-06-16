@@ -10,14 +10,14 @@ var loadFile = function (event) {
     const quartoCamas = localStorage.getItem('quartoCamas');
     const precoTotal = localStorage.getItem('precoTotal');
     const nomeHotel = localStorage.getItem('nomeHotel');
-    const dataEstadia = localStorage.getItem('dataEstadia');
+    const dateRange = localStorage.getItem('dateRange');
     const quantidadeHospedes = localStorage.getItem('quantidadeHospedes');
 
     document.getElementById('quarto-info').textContent = quartoNome;
     document.getElementById('camas-info').textContent = quartoCamas;
     document.getElementById('preco-info').textContent = precoTotal;
     document.getElementById('nome-hotel').textContent = nomeHotel;
-    document.getElementById('data-estadia').textContent = dataEstadia;
+    document.getElementById('date-range').textContent = dateRange;
     document.getElementById('quantidade-hospedes').textContent = quantidadeHospedes;
 
     // Código para envio das informações do contratante

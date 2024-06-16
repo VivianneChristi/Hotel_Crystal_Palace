@@ -85,7 +85,7 @@ function reservarQuarto(nome, camas, precoTotal) {
 
     // Armazene os detalhes no localStorage
     localStorage.setItem('nomeHotel', document.getElementById('destino').value);
-    localStorage.setItem('dataEstadia', document.getElementById('dateRange').value);
+    localStorage.setItem('dateRange', document.getElementById('dateRange').value);
     localStorage.setItem('quantidadeHospedes', document.getElementById('campo_selecao').value);
 
     // Armazena os dados do quarto no localStorage
