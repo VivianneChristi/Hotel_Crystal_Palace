@@ -68,21 +68,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 quartoDiv.innerHTML = `
                     <div class="quarto_card">
-    <img src="/img/Cama_do_hotel.png" alt="${quarto.nome}" class="quarto_imagem">
-    <div class="quarto_detalhes">
-        <div class="quarto_info">
-            <h2 class="quarto_nome">${quarto.nome}</h2>
-            <div class="quarto_camas">${quarto.camas}</div>
-        </div>
-        <div class="quarto_preco_info">
-            <p class="titulo_quarto_preco">Valor Total</p>
-            <p class="quarto_preco">R$ ${precoTotal}</p>
-        </div>
-        <form action="/reserva" method="POST">
-        <button class="quarto_button" onclick="enviarDados('${quarto.nome}', '${quarto.camas}', '${precoTotal}')">Reservar Quarto</button>
-     </form>
-        </div>
-</div>
+                        <img src="/img/Cama_do_hotel.png" alt="${quarto.nome}" class="quarto_imagem">
+                        <div class="quarto_detalhes">
+                            <div class="quarto_info">
+                                <h2 class="quarto_nome">${quarto.nome}</h2>
+                                <div class="quarto_camas">${quarto.camas}</div>
+                            </div>
+                            <div class="quarto_preco_info">
+                                <p class="titulo_quarto_preco">Valor Total</p>
+                                <p class="quarto_preco">R$ ${precoTotal}</p>
+                            </div>
+                            <button class="quarto_button" ">Reservar Quarto</button>
+                        </div>
+                    </div>
                 `;
 
                 resultadoBuscaDiv.appendChild(quartoDiv);
