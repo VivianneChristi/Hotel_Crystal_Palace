@@ -20,6 +20,12 @@ app.set('views', path.join(__dirname, 'frontend/views'));
 // Configurar diretório de arquivos estáticos
 app.use(express.static(path.join(__dirname, 'frontend/assets')));
 
+
+app.use(express.json());
+
+/*const cors = require("cors");
+app.use(cors());*/
+
 // Usar o roteador principal para APIs
 app.use("/api", router);
 
