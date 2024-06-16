@@ -24,33 +24,33 @@
                 <p class="texto_campo_de_busca">
                     Seu refúgio perfeito, onde cada detalhe importa, apenas a um click de distância
                 </p>
-                    <div class="selecao_campo_de_busca">
-                        <img src="/img/icon/icon-destino 1.png" alt="icone_de_afinete_de_localizacao" class="icone_campo_de_busca">
-                        <select id="destino" name="destination" class="campo_selecao" required>
-                            <option value="" disabled selected hidden>Selecione seu destino</option>
-                            <option value="rio">Crystal Rio de Janeiro</option>
-                            <option value="bh">Crystal Belo Horizonte</option>
-                            <option value="pe">Crystal Pernambuco</option>
-                        </select>
-                        <img src="/img/icon/icon-divisão.png" alt="" class="icon_divisão">
-                        <img src="/img/icon/icon-calendar 1.png" alt="icone_de_calendario" class="icone_campo_de_busca">
-                        <input type="text" id="dateRange" name="dateRange" placeholder="Selecione o período" class="campo_input">
-                        <img src="/img/icon/icon-divisão.png" alt="" class="icon_divisão">
-                        <img src="/img/icon/icon-peoples 1.png" alt="icone_de_pessoas" class="icone_campo_de_busca">
-                        <select id="campo_selecao" name="passengers" class="campo_selecao" required>
-                            <option value="" disabled selected hidden>Quantas pessoas?</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5+">5+</option>
-                        </select>
-                        <button id="botao_busca" class="botao_campo_de_busca">
-                            <p class="text_botao">Buscar</p>
-                            <img src="/img/icon/icon-lupa 1.png" alt="" class="icone_botao_campo_de_busca">
-                        </button>
-                    </div>
+                <div class="selecao_campo_de_busca">
+                    <img src="/img/icon/icon-destino 1.png" alt="icone_de_afinete_de_localizacao" class="icone_campo_de_busca">
+                    <select id="destino" name="destination" class="campo_selecao" required>
+                        <option value="" disabled selected hidden>Selecione seu destino</option>
+                        <option value="rio">Crystal Rio de Janeiro</option>
+                        <option value="bh">Crystal Belo Horizonte</option>
+                        <option value="pe">Crystal Pernambuco</option>
+                    </select>
+                    <img src="/img/icon/icon-divisão.png" alt="" class="icon_divisão">
+                    <img src="/img/icon/icon-calendar 1.png" alt="icone_de_calendario" class="icone_campo_de_busca">
+                    <input type="text" id="dateRange" name="dateRange" placeholder="Selecione o período" class="campo_input">
+                    <img src="/img/icon/icon-divisão.png" alt="" class="icon_divisão">
+                    <img src="/img/icon/icon-peoples 1.png" alt="icone_de_pessoas" class="icone_campo_de_busca">
+                    <select id="campo_selecao" name="passengers" class="campo_selecao" required>
+                        <option value="" disabled selected hidden>Quantas pessoas?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5+</option>
+                    </select>
+                    <button id="botao_busca" class="botao_campo_de_busca" onclick="redirecionarParaConfirmacao()">
+                        <p class="text_botao">Buscar</p>
+                        <img src="/img/icon/icon-lupa 1.png" alt="" class="icone_botao_campo_de_busca">
+                    </button>
                 </div>
+
                 <div id="resultado_busca" style="display: none;">
                     <!-- Aqui será exibida a lista de resultados da busca -->
                 </div>

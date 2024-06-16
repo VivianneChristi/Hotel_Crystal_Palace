@@ -19,17 +19,18 @@
             <h1>CONFIRMAÇÃO DE HOSPEDAGEM</h1>
             <hr>
             <p class="suaEstadia">Sua estadia está programada entre</p>
-            <p class="dates">06 - 10 de dez.</p>
-            <hr>
-            <div class="information">
-
-                <h2>INFORMAÇÕES</h2>
-                <p><strong>CONTRATANTE:</strong> Nome do contratante</p>
-                <p><strong>QUANTIDADE DE HÓSPEDES:</strong> 3</p>
-                <p><strong>HOTEL:</strong> BARRA DA TIJUCA, RIO</p>
-                <p><strong>VALOR:</strong> 1550,00</p>
-            </div>
-            <hr>
+        <p class="dates" id="date-range"></p>
+        <hr>
+        <div class="information">
+            <h2>INFORMAÇÕES</h2>
+            <p><strong>CONTRATANTE:</strong> <span id="nome-contratante"></span></p>
+            <p><strong>TELEFONE:</strong> <span id="telefone-contratante"></span></p>
+            <p><strong>CPF:</strong> <span id="cpf-contratante"></span></p>
+            <p><strong>QUANTIDADE DE HÓSPEDES:</strong> <span id="quantidade-hospedes"></span></p>
+            <p><strong>HOTEL:</strong> <span id="nome-hotel"></span></p>
+            <p><strong>VALOR:</strong> <span id="valor-total"></span></p>
+        </div>
+        <hr>
             <div class="notes">
                 <p>* Menores de idade devem estar acompanhados por pelo menos um responsável legal durante toda a
                     estadia.</p>
@@ -49,7 +50,7 @@
 
     <%- include('partials/footer') %>
 
-    <script src="js/confirmação.js"></script>
+    <script src="js/confirmacao.js"></script>
 </body>
 
 </html>

@@ -58,8 +58,13 @@ app.post('/reserva', (req, res) => {
 });
 
 
+// Rota para a página de confirmação
 app.get('/confirmacao', (req, res) => {
-    res.render('confirmacao');
+    // Recupere os parâmetros da URL
+    const { nome, camas, precoTotal, destino, dateRange, passengers } = req.query;
+
+    // Renderize a página de confirmação e passe os parâmetros para a página
+    res.render('confirmacao', { nome, camas, precoTotal, destino, dateRange, passengers });
 });
 
 app.get('/login', (req, res) => {
