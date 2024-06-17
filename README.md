@@ -136,3 +136,10 @@ Hotel Crystal Palace - Sistema de Gerenciamento Hoteleiro
 Preparado por: Vivianne Christi
 Data:16 de Junho de 2024
 
+
+### Links 
+- Documentação Tecnica: https://docs.google.com/document/d/1jxra7DgUah4eADELNW4r7AAnFgMk7uHLvmVEcdEEtQw/edit?usp=sharing
+- Figma : https://www.figma.com/design/Odk5bEkpiRMdbyqf2MWOFc/Trabalho-Final---Crystal-Pallace?node-id=0-1&t=cB4S4Laslqq6QkwN-1
+- Identidade Visual: https://www.canva.com/design/DAGF-YwUE7w/byYKo5Piha1hYSBwb2QJsg/view?utm_content=DAGF-YwUE7w&utm_campaign=designshare&utm_medium=link&utm_source=editor
+- Apresentação: https://sesisenaispedu-my.sharepoint.com/:p:/r/personal/ruan_feitosa_senaisp_edu_br/Documents/Apresenta%C3%A7%C3%A3o%20Crystal%20Palace.pptx?d=w707f81c3445b40a1a8659136b06f808a&csf=1&web=1&e=exP5tw&nav=eyJzSWQiOjI1OSwiY0lkIjo0MDI2Mjg3OTk1fQ
+- Manual do Usuario:https://docs.google.com/document/d/1ssiqh9QqMGCld_UuZZEraoUg1Jsx1SwmMoLfASl0ef4/edit?usp=sharing
