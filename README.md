@@ -16,12 +16,8 @@ O Hotel Crystal Palace é um sistema de gerenciamento hoteleiro completo, projet
 - Backend:
 - Node.js: Plataforma para execução de código JavaScript no servidor.
 - Express.js: Framework para construção de APIs e servidores HTTP.
-- MongoDB: Banco de dados NoSQL para armazenamento de dados.
-- Mongoose: Biblioteca para modelagem de dados em MongoDB.
 - Frontend:
-- React.js: Biblioteca para construção de interfaces de usuário.
-- Redux: Biblioteca para gerenciamento de estado.
-- Bootstrap: Framework CSS para estilização e responsividade.
+- Ejs
 - Autenticação:
 - JWT (JsonWebToken): Para autenticação e autorização seguras.
 
@@ -29,26 +25,26 @@ O Hotel Crystal Palace é um sistema de gerenciamento hoteleiro completo, projet
 Abaixo, está a estrutura detalhada do projeto, dividida em backend e frontend:
 
 Hotel_Crystal_Palace-main/
-│
-├── backend/
-│   ├── controllers/            # Lógica de controle do servidor
-│   ├── models/                 # Modelos de dados
-│   ├── routes/                 # Definição das rotas da API
-│   ├── config/                 # Configurações gerais (ex: banco de dados)
-│   ├── app.js                  # Arquivo principal do servidor
-│   └── package.json            # Gerenciamento de dependências
-│
-├── frontend/
-│   ├── public/                 # Arquivos públicos estáticos
-│   ├── src/
-│   │   ├── components/         # Componentes React
-│   │   ├── redux/              # Arquivos Redux
-│   │   ├── App.js              # Componente principal
-│   │   └── index.js            # Ponto de entrada da aplicação React
-│   └── package.json            # Gerenciamento de dependências
-│
-├── README.md                   # Documentação inicial do projeto
-└── .gitignore                  # Arquivos e pastas ignoradas pelo Git
+│ <br>
+├── backend/ <br>
+│   ├── controllers/            # Lógica de controle do servidor <br>
+│   ├── models/                 # Modelos de dados <br>
+│   ├── routes/                 # Definição das rotas da API <br>
+│   ├── config/                 # Configurações gerais (ex: banco de dados)  <br>
+│   ├── app.js                  # Arquivo principal do servidor <br>
+│   └── package.json            # Gerenciamento de dependências <br>
+│ <br>
+├── frontend/ <br>
+│   ├── public/                 # Arquivos públicos estáticos <br>
+│   ├── src/ <br>
+│   │   ├── components/         # Componentes React <br>
+│   │   ├── redux/              # Arquivos Redux <br>
+│   │   ├── App.js              # Componente principal <br>
+│   │   └── index.js            # Ponto de entrada da aplicação React <br>
+│   └── package.json            # Gerenciamento de dependências <br>
+│ <br>
+├── README.md                   # Documentação inicial do projeto <br>
+└── .gitignore                  # Arquivos e pastas ignoradas pelo Git <br>
 
 
 ### 4. Configuração e Execução
@@ -139,7 +135,10 @@ Data:16 de Junho de 2024
 
 ### Links 
 - Documentação Tecnica: https://docs.google.com/document/d/1jxra7DgUah4eADELNW4r7AAnFgMk7uHLvmVEcdEEtQw/edit?usp=sharing
+- 
 - Figma : https://www.figma.com/design/Odk5bEkpiRMdbyqf2MWOFc/Trabalho-Final---Crystal-Pallace?node-id=0-1&t=cB4S4Laslqq6QkwN-1
+- 
 - Identidade Visual: https://www.canva.com/design/DAGF-YwUE7w/byYKo5Piha1hYSBwb2QJsg/view?utm_content=DAGF-YwUE7w&utm_campaign=designshare&utm_medium=link&utm_source=editor
 - Apresentação: https://sesisenaispedu-my.sharepoint.com/:p:/r/personal/ruan_feitosa_senaisp_edu_br/Documents/Apresenta%C3%A7%C3%A3o%20Crystal%20Palace.pptx?d=w707f81c3445b40a1a8659136b06f808a&csf=1&web=1&e=exP5tw&nav=eyJzSWQiOjI1OSwiY0lkIjo0MDI2Mjg3OTk1fQ
+
 - Manual do Usuario:https://docs.google.com/document/d/1ssiqh9QqMGCld_UuZZEraoUg1Jsx1SwmMoLfASl0ef4/edit?usp=sharing
