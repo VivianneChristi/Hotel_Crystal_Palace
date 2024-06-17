@@ -1,29 +1,16 @@
-
 var loadFile = function (event) {
     var image = document.getElementById("output");
     image.src = URL.createObjectURL(event.target.files[0]);
 };
 
-// Seleciona os elementos de entrada para email e senha
-
-// Seleciona o botão de login pelo ID
-const botao_login = document.getElementById('login');
-
-const botao_register = document.getElementById('register');
-
-
-// Array para armazenar os dados
-const data = [];
-
+const botao_login = document.getElementById('login-btn');
+const botao_register = document.getElementById('register-btn');
 
 botao_register.addEventListener('click', function (event) {
-
     event.preventDefault();
-
-
-    const name = document.getElementsByClassName('input')[2]
-    const email = document.getElementsByClassName('input')[3];
-    const senha = document.getElementsByClassName('input')[4];
+    const name = document.querySelector('#register-form input[name="name"]');
+    const email = document.querySelector('#register-form input[name="email"]');
+    const senha = document.querySelector('#register-form input[name="pswd"]');
 
     const info = {
         nome: name.value,
@@ -38,17 +25,15 @@ botao_register.addEventListener('click', function (event) {
         method: 'POST',
         body: JSON.stringify(info),
         headers: myHeaders
-    }
-
+    };
 
     fetch('http://localhost:5000/api/users', fetchData)
         .then((response) => response.json())
         .then((dados) => {
-
+            console.log('Dados recebidos:', dados);
             if (dados.error) {
                 alert(dados.error);
             }
-
             if (dados.logado === true) {
                 window.location.href = "http://127.0.0.1:5000/";
             }
@@ -56,27 +41,19 @@ botao_register.addEventListener('click', function (event) {
         .catch((error) => {
             console.error('Erro:', error);
         });
-
 });
 
-
-
-// Adiciona um evento de clique ao botão de login
 botao_login.addEventListener('click', function (event) {
-    // Previne o comportamento padrão do formulário
     event.preventDefault();
+    const email = document.querySelector('#login-form input[name="email"]');
+    const senha = document.querySelector('#login-form input[name="pswd"]');
 
-    const email = document.getElementsByClassName('input')[0];
-    const senha = document.getElementsByClassName('input')[1];
-
-    // Coleta as informações de email e senha
     const info = {
         email: email.value,
         senha: senha.value
     };
 
-
-    console.log(info)
+    console.log('Informações de login:', info);
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -85,13 +62,18 @@ botao_login.addEventListener('click', function (event) {
         method: 'POST',
         body: JSON.stringify(info),
         headers: myHeaders
-    }
-
+    };
 
     fetch('http://localhost:5000/api/users/login', fetchData)
-        .then((response) => response.json())
+        .then((response) => {
+            console.log('Resposta bruta:', response);
+            return response.json();
+        })
         .then((dados) => {
-
+            console.log('Dados recebidos:', dados);
+            if (dados.error) {
+                alert(dados.error);
+            }
             if (dados.logado === true) {
                 window.location.href = "http://127.0.0.1:5000/";
             }
@@ -99,6 +81,4 @@ botao_login.addEventListener('click', function (event) {
         .catch((error) => {
             console.error('Erro:', error);
         });
-    //   console.log(response.json().then(dados => console.log(dados)).catch(erro => console.log(erro)))
 });
-
