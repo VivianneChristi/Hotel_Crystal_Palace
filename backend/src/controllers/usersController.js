@@ -35,7 +35,7 @@ exports.createUser = async (req, res) => {
 
         if (userSemValidacao === true) {
             const user = await usersRepository.createUser(req.body);
-            res.status(201).json({msg: 'Usuário Criado com Sucesso!', logado: true });  // Retorna a resposta de sucesso se a criação do usuário passar
+            res.status(201).json({ msg: 'Usuário Criado com Sucesso!' });  // Retorna a resposta de sucesso se a criação do usuário passar
         } else {
             res.status(500).json({ error: userSemValidacao });
         }
