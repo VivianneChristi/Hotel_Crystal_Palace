@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Recupera as informações do localStorage
     const nomeContratante = localStorage.getItem('nomeContratante');
     const telefoneContratante = localStorage.getItem('telefoneContratante');
@@ -16,4 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('nome-hotel').textContent = nomeHotel || '';
     document.getElementById('valor-total').textContent = valorTotal || '';
     document.getElementById('date-range').textContent = dateRange || '';
+});
+
+
+
+/*----------------Menu Hamburguer*/
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.menu-hamburger');
+    const menuContent = document.querySelector('.menu-hamburger-content');
+
+    hamburger.addEventListener('click', function () {
+        menuContent.classList.toggle('active');
+    });
 });

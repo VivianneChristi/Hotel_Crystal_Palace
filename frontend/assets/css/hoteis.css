@@ -27,30 +27,50 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    max-width: 100%;
     background-color: var(--cor-navbar);
     color: var(--cor-fonte);
-    max-width: 100%;
 }
 
 .logo_nav {
     width: 142px;
     height: 82px;
+    margin-left: 102px;
+    margin-top: 1px;
 }
 
 .links_container {
     display: flex;
     align-items: center;
-    gap: 25px;
     font-weight: 100;
+    gap: 25px;
+    margin-right: 33px;
 }
 
+/* Links de navegação (excluindo o ícone de login) */
+.nav_links {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+/* Link individual da navegação */
 .links_nav {
     color: var(--cor-fonte);
+    text-decoration: none;
     font-size: 20px;
 }
 
-.links_nav:hover {
+.links_nav {
     text-decoration: underline;
+}
+
+/* Ícone de login separado */
+.icon_login {
+    display: flex;
+    align-items: center;
 }
 
 .icon_login_nav {
@@ -59,8 +79,47 @@ body {
     border-radius: 50%;
 }
 
-.responsive {
+/* Estilo do botão de hambúrguer */
+.menu-hamburger {
     display: none;
+    cursor: pointer;
+}
+
+.menu-hamburger img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilo do menu hambúrguer (escondido por padrão) */
+.menu-hamburger-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-navbar);
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-hamburger-content a {
+    color: var(--cor-fonte);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.menu-hamburger-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar o menu responsivo ao clicar */
+.menu-hamburger-content.active {
+    display: flex;
 }
 
 /*------------------------------------------Text--------------------------------*/
@@ -448,15 +507,16 @@ hr {
         margin-right: 10px;
     }
 
-    hr{
+    hr {
         width: 100%;
     }
+
     .rodape {
         width: 430px;
 
     }
 
-    .logo{
+    .logo {
         align-content: center;
         width: 419px;
     }
@@ -536,42 +596,31 @@ hr {
 
 
 
+    @media (min-width: 320px) and (max-width: 932px) {
 
-    @media only screen and (max-width: 768px) {
-
-        body {
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            font-size: 12px;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-        }
 
         .links_container {
-            gap: 10px;
-            display: flex;
-            flex-direction: row;
+            display: none;
         }
 
         .logo_nav {
-            width: 100px;
-            height: 100px;
+            margin-left: 15px;
         }
 
-        .text1,
-        .hotel,
-        .sub-text {
-            width: 100%;
-            /* Adjusted width for smaller screens */
+        .menu-hamburger {
+            margin-right: 10px;
+            display: block;
         }
     }
 
-    .card-container {
-        top: 3 0px;
+    .text1,
+    .hotel,
+    .sub-text {
+        width: 100%;
+        /* Adjusted width for smaller screens */
     }
+}
+
+.card-container {
+    top: 3 0px;
 }

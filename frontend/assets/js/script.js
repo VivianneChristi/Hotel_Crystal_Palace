@@ -96,3 +96,16 @@ function reservarQuarto(nome, camas, precoTotal) {
     // Redireciona para a página de reserva
     window.location.href = '/reserva';
 }
+
+
+
+
+/*----------------Menu Hamburguer*/
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.menu-hamburger');
+    const menuContent = document.querySelector('.menu-hamburger-content');
+
+    hamburger.addEventListener('click', function () {
+        menuContent.classList.toggle('active');
+    });
+});

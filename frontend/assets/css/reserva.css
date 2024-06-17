@@ -17,7 +17,8 @@
 /*-------------------------------Inicio style Main ------------------------*/
 body {
     background-color: var(--cor-principal);
-    overflow-x: hidden; /* Impede a rolagem horizontal */
+    overflow-x: hidden;
+    /* Impede a rolagem horizontal */
 }
 
 /*-------------------------------Inicio style Navbar ------------------------*/
@@ -46,21 +47,79 @@ body {
     margin-right: 33px;
 }
 
+/* Links de navegação (excluindo o ícone de login) */
+.nav_links {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+/* Link individual da navegação */
 .links_nav {
     color: var(--cor-fonte);
     text-decoration: none;
     font-size: 20px;
 }
 
-.links_nav:hover {
+.links_nav {
     text-decoration: underline;
+}
+
+/* Ícone de login separado */
+.icon_login {
+    display: flex;
+    align-items: center;
 }
 
 .icon_login_nav {
     width: 55px;
     height: 55px;
-    margin-right: 33.5px;
     border-radius: 50%;
+}
+
+/* Estilo do botão de hambúrguer */
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-hamburger img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilo do menu hambúrguer (escondido por padrão) */
+.menu-hamburger-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-navbar);
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-hamburger-content a {
+    color: var(--cor-fonte);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.menu-hamburger-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar o menu responsivo ao clicar */
+.menu-hamburger-content.active {
+    display: flex;
 }
 
 .container {
@@ -230,22 +289,17 @@ main h1 {
         padding: 0;
     }
 
-    .navbar {
-        font-size: 12px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
     .links_container {
-        gap: 10px;
-        display: flex;
-        flex-direction: row;
+        display: none;
     }
 
     .logo_nav {
-        width: 100px;
-        height: 100px;
+        margin-left: 15px;
+    }
+
+    .menu-hamburger {
+        margin-right: 10px;
+        display: block;
     }
 
     main h1 {
@@ -269,7 +323,7 @@ main h1 {
     .contractor-info form button {
         width: 100%;
         padding: 10px;
-    margin-bottom: 10px;
+        margin-bottom: 10px;
 
     }
 }

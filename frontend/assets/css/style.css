@@ -46,21 +46,79 @@ body {
     margin-right: 33px;
 }
 
+/* Links de navegação (excluindo o ícone de login) */
+.nav_links {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+/* Link individual da navegação */
 .links_nav {
     color: var(--cor-fonte);
     text-decoration: none;
     font-size: 20px;
 }
 
-.links_nav:hover {
+.links_nav {
     text-decoration: underline;
+}
+
+/* Ícone de login separado */
+.icon_login {
+    display: flex;
+    align-items: center;
 }
 
 .icon_login_nav {
     width: 55px;
     height: 55px;
-    margin-right: 33.5px;
     border-radius: 50%;
+}
+
+/* Estilo do botão de hambúrguer */
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-hamburger img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilo do menu hambúrguer (escondido por padrão) */
+.menu-hamburger-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-navbar);
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-hamburger-content a {
+    color: var(--cor-fonte);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.menu-hamburger-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar o menu responsivo ao clicar */
+.menu-hamburger-content.active {
+    display: flex;
 }
 
 /*-------------------------------Inicio style Conteudo Principal ------------------------*/
@@ -756,4 +814,961 @@ hr {
     color: #F9EBD7;
     text-decoration: none;
     font-weight: bold;
+}
+
+
+
+
+
+
+/* responsividade*/
+@media (max-width: 1024px) {
+    .navbar {
+        font-size: 16px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .container_pai {
+        width: 100%;
+        height: 1000px;
+        background-image: url(../img/Plano_de_Fundo.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo_nav {
+        width: 100px;
+        height: 100px;
+    }
+
+    .titulo_conteudo_Principal {
+        width: 719px;
+        height: 140px;
+        margin: 200px 0 0 99px;
+        font-size: 60px;
+        font-weight: 100;
+    }
+
+    .campo_de_busca_conteudo_Principal {
+        width: 90%;
+        height: auto;
+        margin: 5px auto;
+        background-color: var(--cor-fonte);
+        color: var(--cor-principal);
+        border-radius: 15px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .selecao_campo_de_busca {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .texto_campo_de_busca {
+        margin-top: 25px;
+        margin-left: 53px;
+        font-size: 20px;
+    }
+
+    .selecao_campo_de_busca {
+        display: flex;
+        align-items: center;
+        margin-left: 23px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .icone_campo_de_busca {
+        width: 30px;
+        height: 30px;
+        margin-left: 23px;
+        margin-top: 5px;
+    }
+
+    .campo_input {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-top: 5px;
+        padding: 5px 10px;
+        border: 1px solid #2f4f4e70;
+        border-radius: 4px;
+        width: 226px;
+        background-color: var(--cor-fonte);
+    }
+
+    .campo_selecao {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid #2f4f4e70;
+        border-radius: 4px;
+        background-color: var(--cor-fonte);
+        width: 226px;
+    }
+
+    .icon_divisão {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .botao_campo_de_busca {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 229px;
+        height: 41px;
+        border-radius: 50px;
+        margin-left: 14px;
+        color: var(--cor-fonte);
+        background-color: var(--cor-segundaria);
+        border: none;
+        cursor: pointer;
+    }
+
+    .text_botao {
+        font-size: 20px;
+        margin: 7px 0 7px 20px;
+    }
+
+    .icone_botao_campo_de_busca {
+        width: 23px;
+        height: 23px;
+        margin: 7px 17px 7px 90px;
+    }
+
+    .botao_campo_de_busca:hover {
+        background-color: #263f3e;
+    }
+
+    #resultado_busca .quarto {
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px 0;
+        margin-top: 4%;
+        background-color: var(--cor-fonte);
+        box-shadow: 0 2px 5px #2f4f4ea1;
+        align-items: center;
+    }
+
+    .quarto_card {
+        display: flex;
+        width: 100%;
+        height: 115px;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-left: 26px;
+        border-radius: 10px;
+    }
+
+    .quarto_imagem {
+        width: 327px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .quarto_detalhes {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .quarto_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 200px;
+        /* Ajuste a largura conforme necessário */
+    }
+
+    .quarto_nome {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--cor-segundaria);
+        margin-bottom: 8px;
+    }
+
+    .quarto_preco_info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        /* Ajuste a margem conforme necessário */
+    }
+
+    .titulo_quarto_preco {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--cor-segundaria);
+        margin-bottom: 8px;
+    }
+
+    .quarto_preco {
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--cor-segundaria);
+        margin-top: 0;
+        /* Remova o espaço superior para evitar espaço extra */
+    }
+
+    .quarto_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 229px;
+        height: 41px;
+        border-radius: 50px;
+        margin-left: 14px;
+        color: var(--cor-fonte);
+        background-color: var(--cor-segundaria);
+        border: none;
+        cursor: pointer;
+    }
+
+    .quarto_button:hover {
+        background-color: #1b2d2d;
+    }
+
+    .conteudo_informativo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--cor-segundaria);
+        border-radius: 35px;
+    }
+
+    .titulo_conteudo_informativo {
+        display: flex;
+        margin-top: 34px;
+        margin-left: 80px;
+        width: 707px;
+        height: 146px;
+        font-size: 60px;
+        font-weight: 400;
+        color: var(--cor-fonte);
+    }
+
+    .paragrafro_conteudo_informativo {
+        width: 707px;
+        margin-top: 17px;
+        margin-left: 80px;
+        font-size: 20px;
+        color: var(--cor-fonte);
+    }
+
+    .paragrafro_conteudo_informativo_span {
+        font-weight: bold;
+        color: var(--cor-fonte);
+        display: inline;
+    }
+
+    .link_botao {
+        margin-left: 80px;
+        margin-top: 10px;
+
+    }
+
+    .botão_conteudo_informativo {
+        width: 249px;
+        height: 51px;
+        font-size: 25px;
+        color: var(--cor-fonte);
+        border-radius: 50px;
+        background-color: var(--cor-de-destaque);
+        border: none;
+        cursor: pointer;
+    }
+
+    .botão_conteudo_informativo:hover {
+        background-color: #a07a22;
+    }
+
+    /* Container principal com fundo amarelo */
+    .container_amarelo {
+        background-color: var(--cor-de-destaque);
+        border-radius: 25px;
+        padding: 24px;
+        margin: 24px 0;
+        width: calc(100% - 116px);
+        /* Espaço para margens */
+        max-width: 1440px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .paragrafo_container_amarelo {
+        width: 389px;
+        height: 31px;
+        margin-left: 53px;
+        font-size: 20px;
+        color: var(--cor-fonte);
+        margin-bottom: 10px;
+        font-weight: 200;
+    }
+
+    .titulo_container_amarelo {
+        width: 524px;
+        height: 146px;
+        margin-left: 53px;
+        font-size: 65px;
+        color: var(--cor-fonte);
+        margin-bottom: 15px;
+        font-weight: 200;
+    }
+
+    .paragrafo_legenda_titulo_container_amarelo {
+        width: 525px;
+        height: auto;
+        /* Altura automática para ajustar o conteúdo */
+        display: block;
+        /* Define como bloco para posicionamento */
+        position: absolute;
+        /* Posicionamento absoluto */
+        top: 210px;
+        right: 80px;
+        font-size: 20px;
+        color: var(--cor-fonte);
+        text-align: left;
+        line-height: 1.5;
+
+    }
+
+    /* Container dos cartões de hotéis */
+    .hoteis_conteudo_informativo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    /* Estilo comum para os cartões de hotéis */
+    .Hotel_Rj {
+        width: 510px;
+        height: 492px;
+        border-radius: 25px;
+        margin: 74px 53px 59px 67px;
+        position: relative;
+    }
+
+    .Hotel_Bh {
+        width: 510px;
+        height: 492px;
+        border-radius: 25px;
+        margin: 69px 53px 59px 67px;
+        position: relative;
+    }
+
+    .Hotel_Pe {
+        width: 510px;
+        height: 492px;
+        border-radius: 25px;
+        margin: 69px 53px 59px 67px;
+        position: relative;
+    }
+
+    .textos_cards_hoteis {
+        width: 510px;
+        height: 222px;
+        border-radius: 25px;
+        background-color: rgba(30, 30, 30, 0.43);
+        position: absolute;
+        bottom: 2px;
+        left: 2px;
+        color: var(--cor-fonte);
+
+    }
+
+    .titulo_card_hotel {
+        width: 263px;
+        height: 134px;
+        margin: 23px 0 0 32px;
+        font-size: 55px;
+    }
+
+    .quantidade_hotel {
+        width: 186px;
+        height: 42px;
+        margin: 2px 0 0 32px;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .textos_cards_hoteis_Pe {
+        width: 1085px;
+        height: 222px;
+        border-radius: 25px;
+        background-color: rgba(30, 30, 30, 0.43);
+        position: absolute;
+        bottom: -1px;
+        left: 2px;
+        color: var(--cor-fonte);
+    }
+
+    .titulo_card_hotel_Pe {
+        width: 397px;
+        height: 67px;
+        margin: 94px 0 0 32px;
+        font-size: 55px;
+    }
+
+    .quantidade_hotel_Pe {
+        width: 186px;
+        height: 42px;
+        margin: 12px 0 0 32px;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .logo {
+        position: relative;
+        display: flex;
+        width: 30%;
+        top: 180px;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+        border-color: #D9A530;
+    }
+
+    .central-reservas {
+        position: absolute;
+        top: 240px;
+        left: 40px;
+    }
+
+    .phone-number {
+        position: relative;
+        top: 23px;
+        left: 40px;
+    }
+
+    .rodape {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 30px;
+        color: #F9EBD7;
+        font-family: 'Montserrat';
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: var(--cor-segundaria);
+        padding: 20px;
+    }
+
+    .support,
+    .social-media,
+    .shortcuts,
+    .locations {
+        margin-bottom: 20px;
+    }
+
+    .support-button,
+    .social-media-button,
+    .shortcuts-button {
+        background-color: #D9A530;
+        color: #2F4F4E;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .support p,
+    .phone-number {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .locations {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+        padding: 0 10px;
+    }
+
+    .locations .column:first-child {
+        margin-left: 30px;
+    }
+
+
+    .location .city {
+        font-weight: bold;
+        color: var(--cor-de-destaque);
+    }
+
+    .location .details {
+        margin: 5px 0;
+        color: #F9EBD7;
+    }
+
+    .social-media-button {
+        color: var(--cor-fonte);
+        width: 450px;
+        position: absolute;
+        top: 630px;
+        left: 50px;
+    }
+
+    .social-icons {
+        position: absolute;
+        left: 100px;
+        justify-content: space-around;
+        margin-top: 10px;
+        /* Adicionando margem para separar dos botões */
+    }
+
+    .site {
+        position: absolute;
+        left: 200px;
+        color: var(--cor-de-destaque);
+    }
+
+    .shortcuts .links {
+        display: flex;
+        position: relative;
+        margin-top: 10px;
+        /* Adicionando margem para separar dos botões */
+    }
+
+    .social-icons {
+        margin-bottom: 30px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    .social-icons span {
+        font-weight: bold;
+    }
+
+    .shortcuts-button {
+        color: var(--cor-fonte);
+        position: absolute;
+        top: 630px;
+        left: 750px;
+    }
+
+    .shortcuts .links {
+        position: relative;
+        left: 750px;
+    }
+
+    .links a {
+        margin-right: 30px;
+    }
+
+
+    .shortcuts .links a {
+        color: #F9EBD7;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+/* Responsividade Mobile */
+@media (min-width: 320px) and (max-width: 932px) {
+
+
+    .links_container {
+        display: none;
+    }
+
+    .logo_nav {
+        margin-left: 15px;
+    }
+
+    .menu-hamburger {
+        margin-right: 10px;
+        display: block;
+    }
+
+    .conteudo_Principal {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        width: 500px;
+        height: auto;
+    }
+
+    .titulo_conteudo_Principal {
+        width: 100%;
+        height: auto;
+        font-size: 25px;
+    }
+
+    .campo_de_busca_conteudo_Principal {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-left: 93px;
+    }
+
+
+
+    .texto_campo_de_busca {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .selecao_campo_de_busca {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* Permitir que os itens quebrem linha */
+        gap: 8px;
+        /* Espaçamento entre os itens */
+    }
+
+    /* Estilo para ícones dentro do campo de busca */
+    .icone_campo_de_busca {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Estilo dos campos de input */
+    .campo_input {
+        font-size: 18px;
+        padding: 10px;
+        width: 87px;
+        flex-direction: row;
+        background-color: var(--cor-fonte);
+    }
+
+    .campo_selecao,
+    .campo_input {
+        flex: 1;
+        width: 123px;
+    }
+
+    .icon_divisão {
+        display: none;
+        /* Esconder o ícone de divisão em dispositivos móveis */
+    }
+
+
+    /* Botão do campo de busca */
+    .botao_campo_de_busca {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+        width: 100%;
+        height: 41px;
+
+
+        /* Texto dentro do botão */
+        .text_botao {
+            font-size: 18px;
+        }
+
+        /* Ícone dentro do botão */
+        .icone_botao_campo_de_busca {
+            width: 23px;
+            height: 23px;
+            margin-left: 10px;
+        }
+    }
+
+    .conteudo_informativo {
+        display: flex;
+        align-content: left;
+        width: 433px;
+
+    }
+
+    .titulo_conteudo_informativo {
+        font-size: 30px;
+    }
+
+    .paragrafro_conteudo_informativo {
+        font-size: 16px;
+    }
+
+    .link_botao {
+        font-size: 25px;
+        width: 246px;
+        height: 41px;
+    }
+
+    .container_amarelo {
+        flex-direction: column;
+        display: flex;
+        width: 392px;
+        height: 978px;
+        margin: 0 auto;
+    }
+
+    .paragrafo_container_amarelo {
+        font-size: 16px;
+    }
+
+    .titulo_container_amarelo {
+        font-size: 30px;
+    }
+
+    .paragrafo_legenda_titulo_container_amarelo {
+        font-size: 14px;
+    }
+
+    .hoteis_conteudo_informativo {
+
+        width: 359px;
+        height: 234px;
+    }
+
+    .img_hoteis_Rj,
+    .img_hoteis_Bh,
+    .img_hoteis_Pe {
+        width: 359px;
+        height: 236px;
+    }
+
+    .hotel_card {
+        width: 100%;
+        /* Ajusta a largura para o tamanho da tela */
+        height: auto;
+        /* Altura automática */
+    }
+
+    .hotel_image {
+        height: auto;
+        /* Ajusta a altura automaticamente */
+    }
+
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+}
+
+/* Responsividade Mobile */
+@media (min-width: 320px) and (max-width: 932px) {
+
+
+    .links_container {
+        display: none;
+    }
+
+    .logo_nav {
+        margin-left: 15px;
+    }
+
+    .menu-hamburger {
+        margin-right: 10px;
+        display: block;
+    }
+
+    .conteudo_Principal {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        width: 500px;
+        height: auto;
+    }
+
+    .titulo_conteudo_Principal {
+        width: 100%;
+        height: auto;
+        font-size: 25px;
+    }
+
+    .campo_de_busca_conteudo_Principal {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-left: 93px;
+    }
+
+
+
+    .texto_campo_de_busca {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .selecao_campo_de_busca {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* Permitir que os itens quebrem linha */
+        gap: 8px;
+        /* Espaçamento entre os itens */
+    }
+
+    /* Estilo para ícones dentro do campo de busca */
+    .icone_campo_de_busca {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Estilo dos campos de input */
+    .campo_input {
+        font-size: 18px;
+        padding: 10px;
+        width: 87px;
+        flex-direction: row;
+        background-color: var(--cor-fonte);
+    }
+
+    .campo_selecao,
+    .campo_input {
+        flex: 1;
+        width: 123px;
+    }
+
+    .icon_divisão {
+        display: none;
+        /* Esconder o ícone de divisão em dispositivos móveis */
+    }
+
+
+    /* Botão do campo de busca */
+    .botao_campo_de_busca {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+        width: 100%;
+        height: 41px;
+
+
+        /* Texto dentro do botão */
+        .text_botao {
+            font-size: 18px;
+        }
+
+        /* Ícone dentro do botão */
+        .icone_botao_campo_de_busca {
+            width: 23px;
+            height: 23px;
+            margin-left: 10px;
+        }
+    }
+
+    .conteudo_informativo {
+        display: flex;
+        align-content: left;
+        width: 433px;
+
+    }
+
+    .titulo_conteudo_informativo {
+        font-size: 30px;
+    }
+
+    .paragrafro_conteudo_informativo {
+        font-size: 16px;
+    }
+
+    .link_botao {
+        font-size: 25px;
+        width: 246px;
+        height: 41px;
+    }
+
+    .container_amarelo {
+        flex-direction: column;
+        display: flex;
+        width: 392px;
+        height: 978px;
+        margin: 0 auto;
+    }
+
+    .paragrafo_container_amarelo {
+        font-size: 16px;
+    }
+
+    .titulo_container_amarelo {
+        font-size: 30px;
+    }
+
+    .paragrafo_legenda_titulo_container_amarelo {
+        font-size: 14px;
+    }
+
+    .hoteis_conteudo_informativo {
+
+        width: 359px;
+        height: 234px;
+    }
+
+    .img_hoteis_Rj,
+    .img_hoteis_Bh,
+    .img_hoteis_Pe {
+        width: 359px;
+        height: 236px;
+    }
+
+    .hotel_card {
+        width: 100%;
+        /* Ajusta a largura para o tamanho da tela */
+        height: auto;
+        /* Altura automática */
+    }
+
+    .hotel_image {
+        height: auto;
+        /* Ajusta a altura automaticamente */
+    }
+
+
+    .logo_rodape {
+        width: 419px;
+    }
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .locations,
+    .column,
+    .city,
+    .details,
+    .social-media,
+    .social-icons {
+        flex-direction: column;
+        margin-left: 10px;
+    }
 }

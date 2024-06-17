@@ -3,7 +3,7 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    
+
 }
 
 /*-------------------------------Variaveis Css ------------------------*/
@@ -19,8 +19,8 @@ body {
     background: url(../img/Plano_de_Fundo.png);
     background-color: black;
     background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -51,21 +51,79 @@ body {
     margin-right: 33px;
 }
 
+/* Links de navegação (excluindo o ícone de login) */
+.nav_links {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+/* Link individual da navegação */
 .links_nav {
     color: var(--cor-fonte);
     text-decoration: none;
     font-size: 20px;
 }
 
-.links_nav:hover {
+.links_nav {
     text-decoration: underline;
+}
+
+/* Ícone de login separado */
+.icon_login {
+    display: flex;
+    align-items: center;
 }
 
 .icon_login_nav {
     width: 55px;
     height: 55px;
-    margin-right: 33.5px;
     border-radius: 50%;
+}
+
+/* Estilo do botão de hambúrguer */
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-hamburger img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilo do menu hambúrguer (escondido por padrão) */
+.menu-hamburger-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-navbar);
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-hamburger-content a {
+    color: var(--cor-fonte);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.menu-hamburger-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar o menu responsivo ao clicar */
+.menu-hamburger-content.active {
+    display: flex;
 }
 
 /*------------------------------------------- Imagem de Perfil ------------------------------*/
@@ -130,7 +188,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+
     color: var(--cor-fonte);
 }
 
@@ -139,7 +197,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+
     color: var(--cor-fonte);
 
     padding: 0px;
@@ -162,9 +220,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     color: var(--cor-fonte);
-   
+
 
     height: 30px;
     text-decoration: underline;
@@ -195,12 +253,12 @@ label {
 
 /*-------------------------------------------- Botões -------------------------------*/
 .options {
-    text-align:center; 
+    text-align: center;
 }
 
 button {
     position: relative;
-    display:inline-block;
+    display: inline-block;
     justify-content: space-between;
     width: 327px;
     height: 58px;
@@ -230,3 +288,20 @@ button {
     transition: 0.3s ease-in;
 }
 
+
+@media (min-width: 320px) and (max-width: 932px) {
+
+
+    .links_container {
+        display: none;
+    }
+
+    .logo_nav {
+        margin-left: 15px;
+    }
+
+    .menu-hamburger {
+        margin-right: 10px;
+        display: block;
+    }
+}
