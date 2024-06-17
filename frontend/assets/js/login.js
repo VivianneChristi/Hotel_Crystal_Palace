@@ -91,9 +91,6 @@ botao_login.addEventListener('click', function (event) {
     fetch('http://localhost:5000/api/users/login', fetchData)
         .then((response) => response.json())
         .then((dados) => {
-            if (dados.error) {
-                alert(dados.error);
-            }
 
             if (dados.logado === true) {
                 window.location.href = "http://127.0.0.1:5000/";
