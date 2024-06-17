@@ -860,7 +860,7 @@ hr {
 
 
 
-/*-------------------------------Inicio style footer ------------------------*/
+/* --------------------------------------- Footer ----------------------------------------- */
 .logo {
     position: relative;
     display: flex;
@@ -878,30 +878,15 @@ hr {
     border-color: #D9A530;
 }
 
-.central-reservas {
-    position: absolute;
-    top: 240px;
-    left: 40px;
-}
-
-.phone-number {
-    position: relative;
-    top: 23px;
-    left: 40px;
-}
-
 .rodape {
     position: relative;
     width: 100%;
     height: auto;
-    top: 30px;
+    top: 300px;
     color: #F9EBD7;
-    font-family: 'Montserrat';
 }
 
 .footer-container {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     background-color: var(--cor-segundaria);
     padding: 20px;
@@ -918,7 +903,7 @@ hr {
 .social-media-button,
 .shortcuts-button {
     background-color: #D9A530;
-    color: #2F4F4E;
+    color: var(--cor-fonte);
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
@@ -935,17 +920,13 @@ hr {
 
 .locations {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.column {
-    flex: 1;
-    padding: 0 10px;
+.location {
+    width: 50%;
+    margin-bottom: 20px;
 }
-
-.locations .column:first-child {
-    margin-left: 30px;
-}
-
 
 .location .city {
     font-weight: bold;
@@ -957,33 +938,6 @@ hr {
     color: #F9EBD7;
 }
 
-.social-media-button {
-    color: var(--cor-fonte);
-    width: 450px;
-    position: absolute;
-    top: 630px;
-    left: 50px;
-}
-
-.social-icons {
-    position: absolute;
-    left: 100px;
-    justify-content: space-around;
-    margin-top: 10px;
-    /* Adicionando margem para separar dos botões */
-}
-
-.site {
-    position: absolute;
-    left: 200px;
-    color: var(--cor-de-destaque);
-}
-
-.shortcuts .links {
-    margin-top: 10px;
-    /* Adicionando margem para separar dos botões */
-}
-
 .social-icons {
     margin-bottom: 30px;
 }
@@ -991,36 +945,22 @@ hr {
 .social-icons img {
     width: 24px;
     height: 24px;
-    margin-right: 10px;
 }
 
 .social-icons span {
+    color: #F9EBD7;
     font-weight: bold;
 }
 
-.shortcuts-button {
-    color: var(--cor-fonte);
-    position: absolute;
-    top: 630px;
-    left: 750px;
-}
-
 .shortcuts .links {
-    position: relative;
-    left: 750px;
+    gap: 10px;
 }
-
-.links a {
-    margin-right: 30px;
-}
-
 
 .shortcuts .links a {
     color: #F9EBD7;
     text-decoration: none;
     font-weight: bold;
 }
-
 @media (min-width: 320px) and (max-width: 932px) {
 
 
@@ -1035,5 +975,82 @@ hr {
     .menu-hamburger {
         margin-right: 10px;
         display: block;
+    }
+
+    .rodape {
+        width: 430px;
+
+    }
+
+    .logo {
+        align-content: center;
+        width: 419px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        color: var(--cor-fonte);
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .responsive {
+        display: flex;
+        width: 60px;
+    }
+
+    .links_container {
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+.logo_rodape {
+    width: 400px;
+    margin-right:400px;
+}
+
+    .rodape {
+        width: 430px;
+        margin-top: -300px;
+
+    }
+
+    .logo {
+        align-content: center;
+        width: 419px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        color: var(--cor-fonte);
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .support {
+        text-align: left;
+
+    }
+
+    .responsive {
+        display: flex;
+        width: 60px;
+    }
+
+    .links_container {
+        display: none;
     }
 }

@@ -513,7 +513,6 @@ hr {
 
     .rodape {
         width: 430px;
-
     }
 
     .logo {
@@ -540,87 +539,4 @@ hr {
     .links_container {
         display: none;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @media (min-width: 320px) and (max-width: 932px) {
-
-
-        .links_container {
-            display: none;
-        }
-
-        .logo_nav {
-            margin-left: 15px;
-        }
-
-        .menu-hamburger {
-            margin-right: 10px;
-            display: block;
-        }
-    }
-
-    .text1,
-    .hotel,
-    .sub-text {
-        width: 100%;
-        /* Adjusted width for smaller screens */
-    }
-}
-
-.card-container {
-    top: 3 0px;
 }
