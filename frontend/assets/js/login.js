@@ -75,7 +75,7 @@ botao_login.addEventListener('click', function (event) {
                 alert(dados.error);
             }
             if (dados.logado === true) {
-                window.location.href = "http://127.0.0.1:5000/";
+                window.location.href = "http://10.92.198.61:5000/";
             }
         })
         .catch((error) => {
