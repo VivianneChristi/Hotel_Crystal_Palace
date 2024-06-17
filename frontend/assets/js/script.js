@@ -94,6 +94,7 @@ function reservarQuarto(nome, camas, precoTotal) {
     localStorage.setItem('precoTotal', precoTotal);
 
     // Redireciona para a página de reserva
+
     window.location.href = '/reserva';
 }
 

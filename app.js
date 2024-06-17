@@ -31,15 +31,16 @@ app.use("/api", router);
 
 // Rota para renderizar a página inicial
 app.get('/', (req, res) => {
-    res.render('index'); // Renderiza 'index.ejs' na pasta 'views'
+    res.render('hoteis');
+    // Renderiza 'index.ejs' na pasta 'views'
 });
 
 app.get('/detalhes', (req, res) => {
     res.render('detalhes');
 });
 
-app.get('/hoteis', (req, res) => {
-    res.render('hoteis');
+app.get('/index', (req, res) => {
+    res.render('index');
 
 });
 
