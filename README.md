@@ -1,31 +1,31 @@
-###Documentação Técnica: Projeto “Hotel Crystal Palace”
+### Documentação Técnica: Projeto “Hotel Crystal Palace”
 
--Índice
--Visão Geral
--Tecnologias Utilizadas
--Estrutura do Projeto
--Configuração e Execução
--Funcionalidades
--APIs
--Considerações Finais
+- Índice
+- Visão Geral
+- Tecnologias Utilizadas
+- Estrutura do Projeto
+- Configuração e Execução
+- Funcionalidades
+- APIs
+- Considerações Finais
 
-###1. Visão Geral
+### 1. Visão Geral
 O Hotel Crystal Palace é um sistema de gerenciamento hoteleiro completo, projetado para otimizar a administração de hotéis. Com este sistema, você pode gerenciar reservas, clientes, quartos, e diversas operações administrativas com facilidade. Ele é desenvolvido para oferecer uma interface intuitiva e uma robusta estrutura de backend que garante eficiência e segurança.
 
-###2. Tecnologias Utilizadas
--Backend:
--Node.js: Plataforma para execução de código JavaScript no servidor.
--Express.js: Framework para construção de APIs e servidores HTTP.
--MongoDB: Banco de dados NoSQL para armazenamento de dados.
--Mongoose: Biblioteca para modelagem de dados em MongoDB.
--Frontend:
--React.js: Biblioteca para construção de interfaces de usuário.
--Redux: Biblioteca para gerenciamento de estado.
--Bootstrap: Framework CSS para estilização e responsividade.
--Autenticação:
--JWT (JsonWebToken): Para autenticação e autorização seguras.
+### 2. Tecnologias Utilizadas
+- Backend:
+- Node.js: Plataforma para execução de código JavaScript no servidor.
+- Express.js: Framework para construção de APIs e servidores HTTP.
+- MongoDB: Banco de dados NoSQL para armazenamento de dados.
+- Mongoose: Biblioteca para modelagem de dados em MongoDB.
+- Frontend:
+- React.js: Biblioteca para construção de interfaces de usuário.
+- Redux: Biblioteca para gerenciamento de estado.
+- Bootstrap: Framework CSS para estilização e responsividade.
+- Autenticação:
+- JWT (JsonWebToken): Para autenticação e autorização seguras.
 
-###3. Estrutura do Projeto
+### 3. Estrutura do Projeto
 Abaixo, está a estrutura detalhada do projeto, dividida em backend e frontend:
 
 Hotel_Crystal_Palace-main/
@@ -51,7 +51,7 @@ Hotel_Crystal_Palace-main/
 └── .gitignore                  # Arquivos e pastas ignoradas pelo Git
 
 
-4. Configuração e Execução
+### 4. Configuração e Execução
 Backend
 Instalação das Dependências:
 Acesse o diretório backend:
@@ -64,7 +64,7 @@ Instale as dependências necessárias:
 npm install
 
 
-Configuração do Banco de Dados:
+### Configuração do Banco de Dados:
 Configure o MongoDB no arquivo backend/config/database.js de acordo com as suas credenciais e URI do MongoDB.
 Execução:
 Inicie o servidor:
@@ -93,7 +93,7 @@ npm start
 
 - A aplicação estará disponível em http://localhost:3000.
 
-###5. Funcionalidades
+### 5. Funcionalidades
 O sistema “Hotel Crystal Palace” oferece as seguintes funcionalidades:
 Gestão de Reservas:
 Criar, atualizar e cancelar reservas.
@@ -107,7 +107,7 @@ Registro e autenticação de clientes.
 Interface de Usuário:
 Painel de controle intuitivo para visualização e gerenciamento das operações do hotel.
 
-###6. APIs
+### 6. APIs
 O backend do “Hotel Crystal Palace” fornece uma API RESTful para comunicação com o frontend. Abaixo estão os principais endpoints disponíveis:
 Reservas:
 GET /reservas: Retorna todas as reservas.
@@ -125,7 +125,7 @@ POST /clientes: Adiciona um novo cliente.
 PUT /clientes/:id: Atualiza os dados de um cliente.
 DELETE /clientes/:id: Remove um cliente.
 
-###7. Considerações Finais
+### 7. Considerações Finais
 Segurança: A autenticação JWT deve ser corretamente configurada para garantir a segurança das rotas protegidas.
 Manutenção: O sistema deve ser regularmente monitorado e atualizado para assegurar o bom funcionamento e a incorporação de novas funcionalidades.
 Melhorias Futuras: Recomenda-se a implementação de testes unitários e funcionais para aumentar a robustez e confiabilidade do sistema.
