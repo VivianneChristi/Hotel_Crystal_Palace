@@ -74,6 +74,9 @@ botao_login.addEventListener('click', function (event) {
             if (dados.error) {
                 alert(dados.error);
             }
+
+            sessionStorage.setItem("token", "logado");
+
             if (dados.logado === true) {
                 window.location.href = "http://10.92.198.61:5000/";
             }

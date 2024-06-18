@@ -95,7 +95,14 @@ function reservarQuarto(nome, camas, precoTotal) {
 
     // Redireciona para a página de reserva
 
-    window.location.href = '/reserva';
+
+    const logado = sessionStorage.getItem("token");
+
+    if (logado !== "logado") {
+        window.location.href = '/login'
+    } else {
+        window.location.href = '/reserva';
+    }
 }
 
 
