@@ -33,9 +33,8 @@ botao_register.addEventListener('click', function (event) {
             console.log('Dados recebidos:', dados);
             if (dados.error) {
                 alert(dados.error);
-            }
-            if (dados.logado === true) {
-                window.location.href = "http://127.0.0.1:5000/";
+            } else {
+                alert('Usuário cadastrado!')
             }
         })
         .catch((error) => {
