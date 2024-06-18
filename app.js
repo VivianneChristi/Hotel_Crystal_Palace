@@ -88,6 +88,6 @@ app.get('/reserva', (req, res) => {
 });
 
 
-app.listen(port, '0.0.0.0', () => {
-    console.log(`Servidor no ar http://localhost:${port}`);
+app.listen(port, '192.168.15.17', () => {
+    console.log(`Servidor no ar http://192.168.15.17:${port}`);
 });

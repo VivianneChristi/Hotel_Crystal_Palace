@@ -27,7 +27,7 @@ botao_register.addEventListener('click', function (event) {
         headers: myHeaders
     };
 
-    fetch('http://localhost:5000/api/users', fetchData)
+    fetch('http://192.168.15.17:5000/api/users', fetchData)
         .then((response) => response.json())
         .then((dados) => {
             console.log('Dados recebidos:', dados);
@@ -52,6 +52,10 @@ botao_login.addEventListener('click', function (event) {
         senha: senha.value
     };
 
+    const emailUser = sessionStorage.getItem('email')
+
+    sessionStorage.setItem('email', email.value)
+
     console.log('Informações de login:', info);
 
     const myHeaders = new Headers();
@@ -63,7 +67,7 @@ botao_login.addEventListener('click', function (event) {
         headers: myHeaders
     };
 
-    fetch('http://localhost:5000/api/users/login', fetchData)
+    fetch('http://192.168.15.17:5000/api/users/login', fetchData)
         .then((response) => {
             console.log('Resposta bruta:', response);
             return response.json();
@@ -77,7 +81,7 @@ botao_login.addEventListener('click', function (event) {
             sessionStorage.setItem("token", "logado");
 
             if (dados.logado === true) {
-                window.location.href = "http://10.92.198.61:5000/";
+                window.location.href = "http://192.168.15.17:5000/";
             }
         })
         .catch((error) => {

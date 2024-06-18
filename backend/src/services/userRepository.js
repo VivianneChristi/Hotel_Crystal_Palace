@@ -1,4 +1,5 @@
 
+const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -45,9 +46,9 @@ class usersRepository {
 
 
 
-    static async getUserById(id) {
+    static async getUserByEmail(email) {
         const users = await this.getAllUsers();
-        return users.find(user => user.id === parseInt(id));
+        return users.find(user => user.email === email);
     };
 
 
@@ -311,55 +312,55 @@ class usersRepository {
         console.log(newPassword)
 
         return false;*/
-        /*
-               const users = await this.getUserById(id);
-       
-               console.log(users);
-       
-               const tokenUser = await this.validarToken(token, users);
-       
-               console.log(tokenUser)
-       
-               const senhaValida = await this.validarSenha(newPassword)
-       
-               console.log(senhaValida)
-               */
-        /*
-                if (senhaValida) {
-                    const index = users.find(p => p.senha === senhaUser);
-        
-                    console.log(index)
-                    if (index === -1) {
-                        return 'Usuário não encontrado';
-                    }
-        
-        
-                    return true;
+    /*
+           const users = await this.getUserById(id);
+   
+           console.log(users);
+   
+           const tokenUser = await this.validarToken(token, users);
+   
+           console.log(tokenUser)
+   
+           const senhaValida = await this.validarSenha(newPassword)
+   
+           console.log(senhaValida)
+           */
+    /*
+            if (senhaValida) {
+                const index = users.find(p => p.senha === senhaUser);
+    
+                console.log(index)
+                if (index === -1) {
+                    return 'Usuário não encontrado';
                 }
-        */
+    
+    
+                return true;
+            }
+    */
 
-        //return senhaValida
+    //return senhaValida
     //}
 
-    
+
     //static async validarToken(token, user) {
 
-        // terminar validação do token => terminar validação da nova senha
-        //const contagem = 0;
+    // terminar validação do token => terminar validação da nova senha
+    //const contagem = 0;
 
-      //  console.log(token)
-        //console.log(user)
+    //  console.log(token)
+    //console.log(user)
 
-        //const validacaoToken = user.find(p => p.token === token);
+    //const validacaoToken = user.find(p => p.token === token);
 
-        //console.log(validacaoToken)
+    //console.log(validacaoToken)
 
-        /*if (validacaoToken !== undefined) {
-            return true;
-        }*/
-/*
-        return false;
-    } */
+    /*if (validacaoToken !== undefined) {
+        return true;
+    }*/
+    /*
+            return false;
+        } */
     static async loginVerificar(user) {
 
         const userIsValidEmail = user.email;
@@ -378,20 +379,32 @@ class usersRepository {
 
                 const users = await this.getAllUsers();
 
-                const loginVerificarEmail = users.find(e => e.email === user.email);
+                const usuario = users.find(p => p.email === user.email);
 
-                const loginVerificarSenha = users.find(s => s.senha === user.senha);
+                if (usuario === undefined) {
+
+                    return 'Usuário não encontrado no Sistema';
+
+                }
+
+                const senhalUser = usuario.senha;
+
+                const loginVerificarSenha = user.senha
+
+                console.log(usuario);
+                console.log(senhalUser);
+                console.log(loginVerificarSenha);
 
 
-                if (loginVerificarEmail !== undefined && loginVerificarSenha !== undefined) {
+
+
+                if (loginVerificarSenha === senhalUser) {
 
                     return true;
 
                 } else {
 
-                    return 'Usuário não encontrado no Sistema';
-
-
+                    return 'Senha incorreta!';
                 }
 
             } else {
