@@ -373,8 +373,6 @@ class usersRepository {
 
             const validSenha = await this.validarSenha(userIsValidSenha);
 
-            console.log(validSenha);
-
             if (validSenha) {
 
                 const users = await this.getAllUsers();
@@ -389,14 +387,7 @@ class usersRepository {
 
                 const senhalUser = usuario.senha;
 
-                const loginVerificarSenha = user.senha
-
-                console.log(usuario);
-                console.log(senhalUser);
-                console.log(loginVerificarSenha);
-
-
-
+                const loginVerificarSenha = user.senha;
 
                 if (loginVerificarSenha === senhalUser) {
 

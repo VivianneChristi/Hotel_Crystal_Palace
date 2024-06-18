@@ -3,11 +3,6 @@ var loadFile = function (event) {
   image.src = URL.createObjectURL(event.target.files[0]);
 };
 
-function carregarUsuario() {
-  
-}
-
-
 
 /*----------------Menu Hamburguer*/
 document.addEventListener('DOMContentLoaded', function () {
